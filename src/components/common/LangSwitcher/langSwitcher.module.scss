@@ -1,0 +1,55 @@
+@import "../../../assets/scss/app";
+
+.langSwitcher {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 112px;
+  height: 34px;
+  border-radius: 17px;
+
+  &_light {
+    box-shadow: inset -3px -3px 5px #FFFFFF, inset 3px 3px 5px #D6D6E1;
+  }
+
+  &_dark {
+    box-shadow: inset -3px -3px 5px #30343A, inset 3px 3px 5px #24262C;
+  }
+
+  .btn {
+    cursor: pointer;
+    @include center();
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.2;
+    transition: 0.3s;
+    border-radius: 17px;
+
+    &_light {
+      color: #292D32;
+    }
+
+    &_dark {
+      color: #FFF;
+    }
+
+
+    &_selected_light {
+      border-radius: 17px;
+      box-shadow: -3px -3px 5px #FFFFFF, 0px 0px 5px #D6D6E1;
+      color: #000;
+      opacity: 1;
+    }
+
+    &_selected_dark {
+      border-radius: 17px;
+      box-shadow: -3px -3px 5px #30343A, 3px 3px 5px #24262C;
+      color: #FFF;
+      opacity: 1;
+    }
+  }
+
+}

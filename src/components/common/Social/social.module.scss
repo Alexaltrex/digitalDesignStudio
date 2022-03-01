@@ -1,0 +1,55 @@
+.social {
+  display: flex;
+  padding: 8px 14px;
+  border-radius: 17px;
+
+  &_light {
+    box-shadow: inset -3px -3px 5px #FFFFFF, inset 3px 3px 5px #D6D6E1;
+  }
+
+  &_dark {
+    box-shadow: inset -3px -3px 5px #30343A, inset 3px 3px 5px #24262C;
+  }
+
+  .icon {
+    display: block;
+    align-items: center;
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+
+    &_light {
+      path {
+        fill: #292D32;
+        opacity: 0.2;
+        transition: 0.3s;
+      }
+
+      &:hover path {
+        opacity: 1;
+      }
+    }
+
+    &_dark {
+      path {
+        fill: #FFF;
+        opacity: 0.2;
+        transition: 0.3s;
+      }
+
+      &:hover path {
+        opacity: 1;
+      }
+    }
+
+
+  }
+
+
+
+
+}

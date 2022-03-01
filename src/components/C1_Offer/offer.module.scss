@@ -1,0 +1,221 @@
+@import "../../assets/scss/app";
+
+.offer {
+  padding-top: 82px;
+
+  @include desktop() {
+    padding-top: 192px;
+  }
+
+  .buttons {
+    margin-top: 35px;
+
+    @include desktop() {
+      margin-top: 62px;
+    }
+
+    .inner {
+      margin-left: -10px;
+      margin-right: -10px;
+      display: flex;
+      flex-wrap: wrap;
+
+      @include desktop() {
+        margin-left: -21px;
+        margin-right: -21px;
+      }
+
+      .btn {
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 0px 20px 0px 0px;
+        border-radius: 25px;
+        background: none;
+        transition: 0.3s;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+
+        @include desktop() {
+          padding: 13px 24px 13px 15px;
+          border-radius: 38px;
+          margin-left: 21px;
+          margin-right: 21px;
+          margin-top: 30px;
+        }
+
+        &_light {
+          box-shadow: inset -3px -3px 5px #FFFFFF, inset 3px 3px 5px #D6D6E1;
+
+          .label {
+            color: #292D32;
+            opacity: 0.2;
+          }
+        }
+
+        &_dark {
+          box-shadow: inset -3px -3px 5px #30343A, inset 3px 3px 5px #24262C;
+
+          .label {
+            color: #FFF;
+            opacity: 0.2;
+          }
+        }
+
+        &_selected_light {
+          box-shadow: -3px -3px 5px #FFFFFF, 0px 0px 5px #D6D6E1;
+
+          .label {
+            opacity: 1;
+          }
+        }
+
+        &_selected_dark {
+          box-shadow: -3px -3px 5px #30343A, 3px 3px 5px #24262C;
+
+          .label {
+            opacity: 1;
+          }
+        }
+
+        .iconWrapper {
+          width: 50px;
+          height: 50px;
+          border-radius: 25px;
+          @include center();
+          position: relative;
+
+          @include desktop() {
+            width: 50px;
+            height: 50px;
+          }
+
+          .inner {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            opacity: 0.1;
+          }
+
+          .icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+          }
+
+        }
+
+        .label {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 37px;
+          margin-left: 10px;
+          transition: 0.3s;
+
+          @include desktop() {
+            font-size: 30px;
+            margin-left: 20px;
+          }
+        }
+
+      }
+
+
+    }
+  }
+
+  .cardWrapper {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop() {
+      flex-direction: row;
+      align-items: flex-start;
+      margin-top: 85px;
+    }
+
+    img {
+      width: 512px;
+      height: auto;
+
+      @include desktop() {
+        width: 534px;
+      }
+    }
+
+    .card {
+      position: relative;
+      margin-top: -70px;
+
+      background: linear-gradient(85.96deg, rgba(255, 255, 255, 0) -20.51%, rgba(255, 255, 255, 0.05) 26.82%, rgba(255, 255, 255, 0) 65.65%), rgba(196, 196, 196, 0.05);
+      box-shadow: 15px 10px 20px rgba(0, 0, 0, 0.1), inset 0px -2px 1px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(30px);
+
+      padding: 20px 36px;
+      box-sizing: border-box;
+      border-radius: 36px;
+
+
+      @include desktop() {
+        margin-top: 25px;
+        margin-left: -60px;
+        flex-grow: 1;
+      }
+
+      .label {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 49px;
+      }
+
+      .icons {
+        margin-top: 20px;
+        display: flex;
+
+        img {
+          display: block;
+          width: 54px;
+          height: 54px;
+
+          &:not(:first-child) {
+            margin-left: 13px;
+          }
+        }
+      }
+
+      .text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 15px;
+
+        @include desktop() {
+          margin-top: 32px;
+        }
+      }
+
+      .icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        svg {
+          width: 70px;
+          height: 70px;
+        }
+      }
+
+    }
+  }
+
+
+}

@@ -1,0 +1,16 @@
+@import "../../../assets/scss/app";
+
+.container {
+  padding: 0 32px;
+
+  @include desktop() {
+    padding: 0;
+  }
+
+  .inner {
+    @include desktop() {
+      width: 1110px;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,172 @@
+@import "../../assets/scss/app";
+
+.aboutUs {
+  padding-top: 100px;
+
+  @include desktop() {
+    padding-top: 94px;
+  }
+
+  .cardWrapper {
+    margin-top: 86px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop() {
+      flex-direction: row-reverse;
+      align-items: flex-start;
+      margin-top: 60px;
+    }
+
+    .imgWrapper {
+      width: 525px;
+      height: 410px;
+      position: relative;
+
+      @include desktop() {
+        flex-shrink: 0;
+        width: 534px;
+        height: 417px;
+      }
+
+      img:first-child {
+        width: 100%;
+      }
+
+      img:last-child {
+        width: 578px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 100%);
+      }
+
+    }
+
+    .card {
+      position: relative;
+      margin-top: -70px;
+
+      background: linear-gradient(85.96deg, rgba(255, 255, 255, 0) -20.51%, rgba(255, 255, 255, 0.05) 26.82%, rgba(255, 255, 255, 0) 65.65%), rgba(196, 196, 196, 0.05);
+      box-shadow: 15px 10px 20px rgba(0, 0, 0, 0.1), inset 0px -2px 1px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(30px);
+
+      padding: 20px 36px;
+      box-sizing: border-box;
+      border-radius: 36px;
+
+
+      @include desktop() {
+        margin-top: 25px;
+        margin-right: -60px;
+        flex-grow: 1;
+      }
+
+      .label {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 49px;
+      }
+
+      .icons {
+        margin-top: 20px;
+        display: flex;
+
+        img {
+          display: block;
+          width: 54px;
+          height: 54px;
+
+          &:not(:first-child) {
+            margin-left: 13px;
+          }
+        }
+      }
+
+      .text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 15px;
+
+        @include desktop() {
+          margin-top: 32px;
+        }
+      }
+
+      .icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        svg {
+          width: 70px;
+          height: 70px;
+        }
+      }
+
+    }
+  }
+
+  .items {
+    margin-top: 63px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 64px;
+    grid-row-gap: 62px;
+
+    @include desktop() {
+      margin-top: 82px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include desktop() {
+        width: 223px;
+      }
+
+      .iconWrapper {
+        width: 100px;
+        height: 100px;
+        border-radius: 36px;
+        @include center();
+
+        &_light {
+          box-shadow: -3px -3px 5px #FFFFFF, 0px 0px 5px #D6D6E1;
+        }
+
+        &_dark {
+          box-shadow: -3px -3px 5px #30343A, 3px 3px 5px #24262C;
+        }
+      }
+
+      .title {
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 160.4%;
+        text-align: center;
+      }
+
+      .text {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+      }
+    }
+
+  }
+
+
+}

@@ -1,0 +1,36 @@
+@import "../../../assets/scss/app";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  .dot {
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    border-radius: 50%;
+    @include center();
+
+    &:not(:first-child) {
+      margin-left: 14px;
+    }
+
+    &_light {
+      box-shadow: inset -3px -3px 5px #FFFFFF, inset 3px 3px 5px #D6D6E1;
+      border: 1px solid #E9E9E9;
+    }
+
+    &_dark {
+      box-shadow: inset -3px -3px 5px #30343A, inset 3px 3px 5px #24262C;
+    }
+
+    .inner {
+      width: 12px;
+      height: 12px;
+      background: linear-gradient(90deg, #44A1F6 0%, #2962F4 100%);
+      border-radius: 50%;
+    }
+  }
+}

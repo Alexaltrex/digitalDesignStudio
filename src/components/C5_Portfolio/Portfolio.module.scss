@@ -1,0 +1,73 @@
+@import "../../assets/scss/app";
+
+.portfolio {
+  padding-top: 48px;
+
+  @include desktop() {
+    padding-top: 68px;
+  }
+
+  .images {
+    overflow: scroll;
+    margin-top: 40px;
+
+    .inner {
+      width: 1110px;
+      display: flex;
+
+      .left {
+        flex-grow: 0;
+
+        div {
+          display: flex;
+
+          img:last-child {
+            margin-left: 30px;
+          }
+        }
+
+        div:last-child {
+          margin-top: 30px;
+        }
+      }
+
+      & > img {
+        margin-left: 30px;
+      }
+
+    }
+  }
+
+  .btn {
+    text-decoration: none;
+    display: block;
+    margin: 53px auto 0;
+    height: 50px;
+    border-radius: 25px;
+    width: 160px;
+    @include center();
+
+    @include desktop() {
+      margin: 60px auto 0;
+    }
+
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+
+    &_light {
+      color: #292D32;
+      box-shadow: -3px -3px 5px #FFFFFF, 0px 0px 5px #D6D6E1;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &_dark {
+      color: #FFFFFF;
+      box-shadow: -3px -3px 5px #30343A, 3px 3px 5px #24262C;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}

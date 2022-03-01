@@ -1,0 +1,116 @@
+@import "../../assets/scss/app";
+
+.footer {
+  padding-top: 90px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+
+  @include desktop() {
+    flex-direction: row;
+    padding-bottom: 60px;
+  }
+
+  .firstBlock {
+    display: flex;
+    justify-content: space-between;
+
+    @include desktop() {
+      flex-direction: column;
+      justify-content: normal;
+      flex-grow: 1;
+    }
+
+    .logo, logo svg {
+      width: 190px;
+      height: 69px;
+    }
+
+    .theme {
+      @include onlyMobile(flex);
+    }
+
+    .copy {
+      @include onlyDesktop() {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 30px;
+      }
+    }
+
+  }
+
+  .secondMobileBlock {
+    @include onlyMobile(flex) {
+      margin-top: 27px;
+      justify-content: space-between;
+    }
+  }
+
+  .thirdBlock {
+    margin-top: 38px;
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    //align-items: flex-end;
+
+
+    @include desktop() {
+      flex-direction: column;
+      justify-content: normal;
+      align-items: normal;
+      width: 731px;
+      margin-top: 0px;
+    }
+
+    .bottom {
+      display: flex;
+      align-items: center;
+      margin-top: 38px;
+
+      @include desktop() {
+        margin-top: 58px;
+        justify-content: space-between;
+      }
+
+      .tel {
+        @include onlyDesktop(flex);
+      }
+
+      .theme {
+        @include onlyDesktop(flex);
+      }
+
+      .langSwitcher {
+        @include onlyDesktop(grid) {
+          flex-grow: 0;
+          flex-shrink: 0;
+        }
+      };
+
+      .rest {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+
+        @include desktop() {
+          flex-grow: unset;
+        }
+
+
+        .copy {
+          @include onlyMobile();
+        }
+
+        .social {
+
+        }
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,30 @@
+@import "../../assets/scss/app";
+
+.ourPartners {
+  padding-top: 90px;
+
+  .swiper {
+    margin-top: 63px;
+
+    @include desktop() {
+      margin-top: 38px;
+    }
+
+    .slide {
+      width: 181px;
+
+      svg path {
+        fill: #777F89;
+      }
+    }
+
+  }
+
+  .pagination {
+    margin-top: 40px;
+
+    @include desktop() {
+      margin-top: 50px;
+    }
+  }
+}

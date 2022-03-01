@@ -1,0 +1,82 @@
+@import "../../assets/scss/app";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22px;
+
+  @include desktop() {
+    padding-top: 53px;
+  }
+
+  .leftBlock {
+    svg {
+      width: 226px;
+      height: 82px;
+
+      @include desktop() {
+        width: 255px;
+        height: 93px;
+      }
+
+    }
+  }
+
+  .rightBlock {
+
+
+    .topRow {
+      display: flex;
+      flex-direction: column;
+
+      @include desktop() {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .topRowLeft {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .topRowRight {
+        display: flex;
+        align-items: center;
+        margin-top: 14px;
+
+        @include desktop() {
+          margin-top: 0;
+        }
+
+        .langSwitcher {
+          @include desktop() {
+            margin-left: 81px;
+          }
+        }
+
+        .social {
+          margin-left: 16px;
+
+          @include desktop() {
+            margin-left: 81px;
+          }
+
+        }
+
+        .tel {
+          @include onlyDesktop(flex) {
+            margin-left: 81px;
+          }
+        }
+      }
+    }
+
+    .BottomRow {
+      @include onlyDesktop(flex) {
+        margin-top: 30px;
+      }
+    }
+
+  }
+}

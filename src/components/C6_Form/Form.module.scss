@@ -1,0 +1,84 @@
+@import "../../assets/scss/app";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+
+  @include desktop() {
+    flex-direction: row-reverse;
+    padding-top: 100px;
+  }
+
+  .img {
+    width: 578px;
+    height: auto;
+
+    @include desktop() {
+      width: 635px;
+      margin-left: 30px;
+    }
+  }
+
+  .formWrapper {
+    margin-top: 68px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop() {
+      margin-top: 0;
+      align-items: flex-start;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 35px;
+      line-height: 43px;
+      text-align: center;
+
+      @include desktop() {
+        text-align: left;
+      }
+    }
+
+    .subtitle {
+      margin-top: 35px;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+
+      @include desktop() {
+        text-align: left;
+      }
+    }
+
+    .formik {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+
+      @include desktop() {
+        align-items: flex-start;
+      }
+
+      .field {
+        align-self: stretch;
+
+        &:not(:first-child) {
+          margin-top: 30px;
+        }
+      }
+
+      .btn {
+        margin-top: 54px;
+      }
+    }
+
+  }
+
+}

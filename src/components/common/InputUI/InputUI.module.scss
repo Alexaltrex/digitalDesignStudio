@@ -1,0 +1,43 @@
+.inputUI {
+  width: 100%;
+  height: 80px;
+  border-radius: 19px;
+  padding: 24px;
+  box-sizing: border-box;
+
+  &_light {
+    background: #FFFFFF;
+    box-shadow: inset -3px -3px 5px #FFFFFF, inset 3px 3px 5px #D6D6E1;
+  }
+
+  &_dark {
+    background: #23272C;
+    box-shadow: inset -3px -3px 5px #30343A, inset 3px 3px 5px #24262C;
+  }
+
+  .input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+
+    &_light {
+      color: #292D32;
+    }
+
+    &_dark {
+      color: #FFFFFF;
+    }
+
+    &::placeholder {
+      color: grey;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+  }
+}

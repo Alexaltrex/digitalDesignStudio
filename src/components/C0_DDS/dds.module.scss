@@ -1,0 +1,108 @@
+@import "../../assets/scss/app";
+
+.dds {
+  padding-top: 64px;
+  display: flex;
+  flex-direction: column;
+
+  @include desktop() {
+    padding-top: 130px;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .firstBlock {
+    @include center();
+
+    @include desktop() {
+      flex-grow: 1;
+    }
+
+    img {
+      width: 300px;
+
+      @include desktop() {
+        height: 500px;
+        width: auto;
+      }
+    }
+  }
+
+  .secondBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 48px;
+
+    @include desktop() {
+      margin-top: 0;
+      align-items: flex-start;
+      width: 386px;
+    }
+
+
+    .title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 80px;
+      line-height: 98px;
+      display: flex;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include desktop() {
+        align-items: flex-start;
+      }
+
+      p:not(:first-child) {
+        margin-top: -10px;
+      }
+
+    }
+
+
+    .text {
+      margin-top: 17px;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 31px;
+      line-height: 38px;
+      text-align: center;
+      width: 386px;
+
+      @include desktop() {
+        text-align: left;
+        margin-top: 46px;
+      }
+
+    }
+
+    .btn {
+      cursor: pointer;
+      border: none;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      background: linear-gradient(90deg, #44A1F6 0%, #2962F4 100%);
+      box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 40px;
+      padding: 28px 70px;
+      margin-top: 16px;
+
+      @include desktop() {
+        margin-top: 45px;
+      }
+    }
+
+
+  }
+}
