@@ -1,0 +1,185 @@
+@import "../../../assets/scss/app";
+
+.iNeedWebsiteModal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: none;
+
+  &_show {
+    display: block;
+  }
+
+  &_light {
+    background: rgba(37, 48, 63, 0.9);
+
+    .content {
+      background: rgba(239, 238, 243, 1);
+
+      .close svg rect {
+        fill: rgb(37, 48, 63);
+      }
+    }
+  }
+
+  &_dark {
+    background: rgba(239, 238, 243, 0.9);
+
+    .content {
+      background: rgba(37, 48, 63, 1);
+
+      .close svg rect {
+        fill: rgb(239, 238, 243);
+      }
+    }
+  }
+
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: vw(450);
+    border-radius: vw(7);
+    padding: vw(100) vw(36) vw(40);
+
+    @include tablet() {
+      width: 450px;
+      border-radius: 7px;
+      padding: 100px 36px 40px;
+    }
+
+    .close {
+      @include button();
+      width: vw(24);
+      height: vw(24);
+      position: absolute;
+      top: vw(14);
+      right: vw(14);
+
+      @include tablet() {
+        width: 24px;
+        height: 24px;
+        top: 14px;
+        right: 14px;
+      }
+
+      svg {
+        width: vw(24);
+        height: vw(24);
+
+        @include tablet() {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .iconWrapper {
+      position: absolute;
+      top: 0;
+      left: vw(36);
+      width: vw(160);
+      height: vw(160);
+      border-radius: vw(58);
+      transform: translate(0, -50%);
+      @include center();
+
+      @include tablet() {
+        left: 36px;
+        width: 160px;
+        height: 160px;
+        border-radius: 58px;
+      }
+
+      .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: vw(58);
+        opacity: 0.1;
+
+        @include tablet() {
+          border-radius: 58px;
+        }
+      }
+
+      svg {
+        position: relative;
+        z-index: 2;
+        width: vw(73);
+        height: vw(73);
+
+        @include tablet() {
+          width: 73px;
+          height: 73px;
+        }
+      }
+    }
+
+    .title {
+      font-weight: 500;
+      font-size: vw(33);
+      line-height: vw(40);
+
+      @include tablet() {
+        font-size: 33px;
+        line-height: 40px;
+      }
+    }
+
+    .text {
+      margin-top: vw(26);
+      font-weight: 500;
+      font-size: vw(16);
+      line-height: vw(20);
+
+      @include tablet() {
+        margin-top: 26px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    .form {
+      margin-top: vw(30);
+
+      @include tablet() {
+        margin-top: 30px;
+      }
+
+      .fieldWrapper {
+        position: relative;
+
+        &:not(:first-child) {
+          margin-top: vw(30);
+
+          @include tablet() {
+            margin-top: 30px;
+          }
+        }
+
+        .error {
+          position: absolute;
+          left: 20px;
+          bottom: 0px;
+          transform: translateY(100%);
+          color: red;
+        }
+      }
+
+      .btn {
+        margin: vw(30) auto 0;
+
+        @include tablet() {
+          margin: 30px auto 0;
+        }
+      }
+    }
+  }
+}

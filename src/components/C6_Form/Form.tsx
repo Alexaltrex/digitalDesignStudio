@@ -47,7 +47,7 @@ export const Form = () => {
     const dispatch = useDispatch();
     const onSubmit = (values: IValues) => {
         //console.log(values);
-        dispatch(appAC.setShowModal({show: true, type: 'on submit'}));
+        //dispatch(appAC.setShowModal({show: true, type: 'on submit'}));
         dispatch(sendBrief(values));
         formik.resetForm();
     }

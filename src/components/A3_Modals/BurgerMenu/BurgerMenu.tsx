@@ -19,33 +19,18 @@ export const BurgerMenu: FC<IBurgerMenu> = ({showBurger, onClose}) => {
     const theme = useSelector(selectTheme);
     const {pathname, hash} = useLocation();
 
-    links[3].to = pathname + "/#contacts";
+    //links[3].to = pathname + "/#contacts";
+    links[2].to = pathname + "/#contacts";
 
-    // 0
-    // pathname: '/'
-    // hash: '#about'
-
-    // 1
-    // pathname: '/portfolio'
-    // hash: ''
-
-    // 2
-    // pathname: '/shop'
-    // hash: ''
-
-    // 3
+    // let linkIndex = 0;
     //
-    // hash: '#contacts'
-
-    let linkIndex = 0;
-
-    if (hash === '#contacts') {
-        linkIndex = 3
-    } else if (pathname === "/shop") {
-        linkIndex = 2
-    } else if (pathname === '/portfolio') {
-
-    }
+    // if (hash === '#contacts') {
+    //     linkIndex = 3
+    // } else if (pathname === "/shop") {
+    //     linkIndex = 2
+    // } else if (pathname === '/portfolio') {
+    //
+    // }
 
     return (
         <div className={clsx({

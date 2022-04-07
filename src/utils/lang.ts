@@ -11,7 +11,7 @@ export const  dictionary = {
     "From turnkey websites to blockchain solutions and NFTs, we do everything you need in today's business.":
         "От сайтов под ключ до блокчейн-решений и NFT – делаем всё, что вам нужно в современном бизнесе.",
     "i need a website": "заказать сайт",
-
+    "I need a website": "Заказать сайт",
 
     // C1_Offer
     "What do we offer": "Услуги",
@@ -135,6 +135,9 @@ export const  dictionary = {
     "Required": "Заполните поле",
     "Wrong email": "Неверный формат почты",
 
+    // OnSubmitModal
+    "Thanks for the request, we will contact you soon": "Спасибо за запрос, мы с Вами скоро свяжемся",
+    "Go back": "Вернуться",
 }
 
 

@@ -1,5 +1,5 @@
 import React, {FC, useRef} from "react";
-import style from "./HowMuchIsModal.module.scss";
+import style from "./INeedWebsiteModal.module.scss";
 import {svgIcons} from "../../../assets/svg/svgIcons";
 import {useFormik} from "formik";
 import {InputUI} from "../../common/InputUI/InputUI";
@@ -9,7 +9,6 @@ import {appAC, selectLang, selectShowModal, selectThemeType, sendEmail} from "..
 import {ButtonUI} from "../../common/ButtonUI/ButtonUI";
 import clsx from "clsx";
 import {useOutsideClick} from "../../../hooks/useOutsideClick";
-import {ICard} from "../../C2_HowMuchIs/constants";
 import {regEmail} from "../../../utils/constants";
 
 interface IValues {
@@ -17,11 +16,8 @@ interface IValues {
     email: string
 }
 type ErrorsType = Partial<IValues>
-interface IHowMuchIsModal {
-    card: ICard | null
-}
 
-export const HowMuchIsModal: FC<IHowMuchIsModal> = ({card}) => {
+export const INeedWebsiteModal = () => {
     const lang = useSelector(selectLang);
 
     const initialValues: IValues = {
@@ -44,16 +40,14 @@ export const HowMuchIsModal: FC<IHowMuchIsModal> = ({card}) => {
     }
 
     const onSubmit = (values: IValues) => {
-        dispatch(sendEmail({...values, order: card?.title}));
+        dispatch(sendEmail({...values, order: "I need a website"}));
         //dispatch(appAC.setShowModal({show: false, type: ''}));
     }
-
     const formik = useFormik({
         initialValues,
         validate,
         onSubmit,
     });
-
     const showModal = useSelector(selectShowModal);
 
     const dispatch = useDispatch();
@@ -72,13 +66,12 @@ export const HowMuchIsModal: FC<IHowMuchIsModal> = ({card}) => {
 
     return (
         <div className={clsx({
-            [style.howMuchIsModal]: true,
-            [style.howMuchIsModal_light]: themeType === "light",
-            [style.howMuchIsModal_dark]: themeType === "dark",
-            [style.howMuchIsModal_show]: showModal.show && showModal.type === 'how much is',
+            [style.iNeedWebsiteModal]: true,
+            [style.iNeedWebsiteModal_light]: themeType === "light",
+            [style.iNeedWebsiteModal_dark]: themeType === "dark",
+            [style.iNeedWebsiteModal_show]: showModal.show && showModal.type === 'i need a website',
         })}>
-            {
-                card &&
+
                 <div className={style.content}
                      ref={ref}
                 >
@@ -89,15 +82,8 @@ export const HowMuchIsModal: FC<IHowMuchIsModal> = ({card}) => {
                         {svgIcons.close}
                     </button>
 
-                    <div className={style.iconWrapper}>
-                        <div className={style.back}
-                             style={{background: card.background}}
-                        />
-                        {card.icon}
-                    </div>
-
-                    <p className={style.title}>{translate(card.title, lang)}</p>
-                    <p className={style.text}>{translate(card.text, lang)}</p>
+                    <p className={style.title}>{translate("I need a website", lang)}</p>
+                    {/*<p className={style.text}>{translate(card.text, lang)}</p>*/}
 
                     <form onSubmit={formik.handleSubmit}
                           className={style.form}
@@ -122,7 +108,6 @@ export const HowMuchIsModal: FC<IHowMuchIsModal> = ({card}) => {
                         <ButtonUI text="Make an order" type="submit" className={style.btn}/>
                     </form>
                 </div>
-            }
         </div>
     )
 }

@@ -49,7 +49,7 @@ export const BuyWebsiteModal = () => {
     const dispatch = useDispatch();
 
     const onSubmit = (values: IValues) => {
-        dispatch(appAC.setShowModal({show: false, type: ''}));
+        //dispatch(appAC.setShowModal({show: false, type: ''}));
         dispatch(sendEmail({...values, order: card.title}));
     };
 
@@ -91,7 +91,7 @@ export const BuyWebsiteModal = () => {
                     <form onSubmit={formik.handleSubmit}>
                         <div className={style.fieldWrapper}>
                             <InputUI id="name"
-                                     placeholder={translate("Your name", lang)}
+                                     placeholder={translate("Enter your name", lang)}
                                      {...formik.getFieldProps("name")}
                             />
                             {formik.errors.name && <p className={style.error}>{translate(formik.errors.name, lang)}</p>}
@@ -99,7 +99,7 @@ export const BuyWebsiteModal = () => {
 
                         <div className={style.fieldWrapper}>
                             <InputUI id="email"
-                                     placeholder={translate("Your email", lang)}
+                                     placeholder={translate("Enter your email", lang)}
                                      {...formik.getFieldProps("email")}
                             />
                             {formik.errors.email && <p className={style.error}>{translate(formik.errors.email, lang)}</p>}

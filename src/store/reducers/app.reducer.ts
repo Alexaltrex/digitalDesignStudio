@@ -8,7 +8,7 @@ type ThunkType = BaseThunkType<AppActionsType>
 
 export interface IShowModal {
     show: boolean
-    type: string // 'on submit', 'buy website', 'how much is'
+    type: string // 'on submit', 'buy website', 'how much is', "i need a website"
 }
 
 
@@ -21,7 +21,6 @@ const initialState = {
         show: false,
         type: '',
     } as IShowModal,
-
 };
 
 //================ REDUCER ===================
@@ -52,11 +51,15 @@ export const appAC = {
     setLang: (lang: string) => ({type: 'DDS/APP/SET_LANG', lang} as const),
     setShowModal: (showModal: IShowModal) => ({type: 'DDS/APP/SET_SHOW_MODAL', showModal} as const),
 }
+
 //================ THUNK CREATORS ==================
-//================ SEND EMAIL ==================
+//================ SEND EMAIL ======================
 export const sendEmail = (data: ISendEmail): ThunkType => async (dispatch) => {
     try {
         await mailAPI.sendEmail(data);
+        dispatch(appAC.setShowModal({show: false, type: ''}));
+        dispatch(appAC.setShowModal({show: true, type: 'on submit'}));
+
     } catch (e: any) {
         console.error(e.message);
         console.error(e.stack);
@@ -68,6 +71,7 @@ export const sendEmail = (data: ISendEmail): ThunkType => async (dispatch) => {
 export const sendBrief = (data: ISendBrief): ThunkType => async (dispatch) => {
     try {
         await mailAPI.sendBrief(data);
+        dispatch(appAC.setShowModal({show: true, type: 'on submit'}));
     } catch (e: any) {
         console.error(e.message);
         console.error(e.stack);

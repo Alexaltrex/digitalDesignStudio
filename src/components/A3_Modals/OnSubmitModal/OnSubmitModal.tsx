@@ -35,9 +35,11 @@ export const OnSubmitModal = () => {
                 >
                     {svgIcons.close}
                 </button>
-                <p className={style.title}>Thanks for the application, we will contact you soon</p>
+                <p className={style.title}>
+                    {translate("Thanks for the request, we will contact you soon", lang)}
+                </p>
 
-                <ButtonUI text={translate("Go back", lang)}
+                <ButtonUI text="Go back"
                           className={style.btn}
                           onClick={onCloseHandler}
                 />

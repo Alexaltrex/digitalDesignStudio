@@ -54,11 +54,13 @@ export const BigForm: FC<IBigForm> = ({title, className}) => {
     }
 
     const dispatch = useDispatch();
+
     const onSubmit = (values: IValues) => {
         dispatch(sendEmail(values));
-        dispatch(appAC.setShowModal({show: true, type: 'on submit'}));
+        //dispatch(appAC.setShowModal({show: true, type: 'on submit'}));
         formik.resetForm();
     };
+
     const formik = useFormik({
         initialValues,
         validate,
