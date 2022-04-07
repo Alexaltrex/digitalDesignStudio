@@ -1,0 +1,82 @@
+@import "../../../assets/scss/app";
+
+.burgerMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  box-sizing: border-box;
+  transform: translateX(100%);
+  transition: 0.3s;
+
+  &_show {
+    transform: translateX(0%);
+  }
+
+  &_light1 {
+    background: #FFEAD7;
+  }
+
+  &_light2 {
+    background: #EFEEF3;
+  }
+
+  &_dark1 {
+    background: #25303F;
+  }
+
+  &_dark2 {
+    background: #27292C;
+  }
+
+  .inner {
+    position: absolute;
+    top: vw(20);
+    bottom: vw(20);
+    left: vw(20);
+    right: vw(20);
+    padding: vw(28) vw(25);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet() {
+      top: 20px;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      padding: 28px 25px;
+    }
+
+    .link {
+      text-decoration: none;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+
+      @include tablet() {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &:not(:first-child) {
+        margin-top: vw(24);
+
+        @include tablet() {
+          margin-top: 24px;
+        }
+      }
+
+      &_light {
+        color: #292D32;
+      }
+
+      &_dark {
+        color: #FFF;
+      }
+    }
+  }
+}

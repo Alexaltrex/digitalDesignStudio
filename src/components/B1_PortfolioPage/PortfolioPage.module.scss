@@ -1,239 +1,49 @@
 @import "../../assets/scss/app";
 
-@mixin firstMobile {
-  flex-direction: row-reverse;
-  align-items: center;
-  margin-top: 35px;
-
-  .imgWrapper {
-    margin-left: 18px;
-    width: 269px;
-    height: 244px;
-
-    img {
-      width: 269px;
-      height: 244px;
-    }
-  }
-
-  .textBlock {
-    flex-grow: 1;
-  }
-}
-
-@mixin secondMobile {
-  align-items: center;
-  margin-top: 35px;
-
-  .imgWrapper {
-    margin-right: 18px;
-    width: 269px;
-    height: 244px;
-
-    img {
-      width: 269px;
-      height: 244px;
-    }
-  }
-
-  .textBlock {
-    flex-grow: 1;
-  }
-}
-
-@mixin firstDesktop {
-  margin-top: 90px;
-  align-items: center;
-
-  .imgWrapper {
-    width: 730px;
-    height: 400px;
-    margin-right: 95px;
-    flex-shrink: 0;
-
-    img {
-      width: 730px;
-      height: 400px;
-    }
-  }
-
-}
-
-@mixin secondDesktop {
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  margin-top: 52px;
-
-  .imgWrapper {
-    width: 445px;
-    height: 350px;
-    margin-left: 157px;
-
-
-    img {
-      width: 445px;
-      height: 350px;
-    }
-  }
-
-  .textBlock {
-    width: 223px;
-  }
-}
-
-@mixin thirdDesktop {
-  margin-top: -50px;
-  align-items: flex-end;
-
-  .imgWrapper {
-    width: 445px;
-    height: 350px;
-    margin-left: 95px;
-    margin-right: 95px;
-
-    img {
-      width: 445px;
-      height: 350px;
-    }
-  }
-
-  .textBlock {
-    width: 223px;
-  }
-}
-
 .portfolioPage {
-  padding-top: 115px;
+  position: relative;
 
-  @include desktop() {
-    padding-top: 80px;
-  }
+  .images {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 1;
 
-  .menu {
-    margin-top: 23px;
+    .wave {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
 
-    @include desktop() {
-      margin-top: 13px;
-    }
-
-    .inner {
-      margin-left: -10px;
-      margin-right: -10px;
-      display: flex;
-      flex-wrap: wrap;
-
-      @include desktop() {
-        margin-left: -20px;
-        margin-right: -20px;
+      &:nth-child(1) {
+        top: 0;
       }
 
-      .item {
-        cursor: pointer;
-        padding: 10px 20px;
-        box-shadow: -3px -3px 5px #30343A, 3px 3px 5px #24262C;
-        border-radius: 37px;
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 37px;
-        margin: 20px 10px 0;
-
-        @include desktop() {
-          padding: 20px 90px;
-          margin: 30px 20px 0;
-        }
-
-        &_not_selected_light {
-          color: rgba(0,0,0,0.2);
-        }
-
-        &_not_selected_dark {
-          color: rgba(255,255,255,0.2);
-        }
+      &:nth-child(2) {
+        top: auto;
+        bottom: 0;
       }
     }
   }
 
-  .items {
-    margin-top: 30px;
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 
-    @include desktop() {
-      margin-top: 100px;
-    }
+    .bigForm {
+      padding-top: vw(122);
 
-    .item {
-      display: flex;
-
-      .imgWrapper {
-        display: block;
-        border-radius: 10px;
-        overflow: hidden;
-        flex-shrink: 0;
-
-        &:hover {
-          img {
-            transform: scale(1.1);
-          }
-        }
-
-        img {
-          object-fit: cover;
-          object-position: center;
-          transition: 0.3s;
-        }
-      }
-
-      .title {
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 160.4%;
-      }
-
-      .text {
-        margin-top: 21px;
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 18px;
-      }
-
-      &:nth-child(odd) {
-        @include mobile() {
-          @include firstMobile();
-        }
-
-      }
-
-      &:nth-child(even) {
-        @include mobile() {
-          @include secondMobile();
-        }
-      }
-
-      //////////////
-
-      &:nth-child(3n-2) {
-        @include desktop() {
-          @include firstDesktop();
-        }
-      }
-
-      &:nth-child(3n-1) {
-        @include desktop() {
-          @include secondDesktop();
-        }
-      }
-
-      &:nth-child(3n) {
-        @include desktop() {
-          @include thirdDesktop;
-        }
+      @include tablet() {
+        padding-top: 122px;
       }
     }
   }
-
-  .bigForm {
-    padding-top: 122px;
-
-
-  }
-
 }
+
+
+

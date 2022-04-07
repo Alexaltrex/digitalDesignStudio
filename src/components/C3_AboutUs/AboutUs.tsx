@@ -9,31 +9,10 @@ import img from "../../assets/png/about us/img.png";
 import blur from "../../assets/png/about us/blur.png";
 import {svgIcons} from "../../assets/svg/svgIcons";
 import clsx from "clsx";
+import {items} from "./constants";
 
-const text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.\n" +
-    "\n" +
-    "Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
-
-const items = [
-    {
-        title: "We create an idea for a future project",
-        text: "Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla consequat massa quis enim.",
-     },
-    {
-        title: "We implement technical solutions",
-        text: "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
-    },
-    {
-        title: "Planning a promotion strategy",
-        text: "Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-    },
-    {
-        title: "We launch your project",
-        text: "Cidiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
-    },
-]
-
-
+const text1 = "The Digital Design Studio is a digital solutions studio designed to enable you to bring your business into the modern Internet space. We offer not only up-to-date but also ahead of time solutions: from “turnkey websites” to NFT products.";
+const text2 = "We use the most modern technologies and relevant approaches. So your website, mobile app, game, or ad campaign will look and work exactly the way it should look and work today.";
 
 export const AboutUs = () => {
     const lang = useSelector(selectLang);
@@ -45,16 +24,21 @@ export const AboutUs = () => {
 
             <div className={style.cardWrapper}>
 
-                <div className={style.imgWrapper}>
+                <div className={style.imgWrapper} data-aos="fade-up">
                     <img src={img} alt=""/>
                     <img src={blur} alt=""/>
                 </div>
 
+                <div className={style.card} data-aos="fade-up">
 
-                <div className={style.card}>
-
+                    <p className={clsx(style.text, style.text1)}>
+                        {translate(text1, lang)}
+                    </p>
+                    <p className={clsx(style.text, style.text1)}>
+                        {``}
+                    </p>
                     <p className={style.text}>
-                        {translate(text, lang)}
+                        {translate(text2, lang)}
                     </p>
 
                 </div>
@@ -63,7 +47,9 @@ export const AboutUs = () => {
             <div className={style.items}>
                 {
                     items.map(({title, text}, index) => (
-                        <div className={style.item} key={index}>
+                        <div className={style.item} key={index}
+                             data-aos="fade-up"
+                        >
                             <div className={clsx({
                                 [style.iconWrapper]: true,
                                 [style.iconWrapper_light]: themeType === "light",
@@ -72,8 +58,8 @@ export const AboutUs = () => {
                                 {/*@ts-ignore*/}
                                 {svgIcons[`aboutUs${index}`]}
                             </div>
-                            <p className={style.title}>{translate(title, lang)}</p>
-                            <p className={style.text}>{translate(text, lang)}</p>
+                            <p className={style.title} data-aos="fade-up">{translate(title, lang)}</p>
+                            <p className={style.text} data-aos="fade-up">{translate(text, lang)}</p>
                         </div>
                     ))
                 }

@@ -1,7 +1,11 @@
 @import "../../assets/scss/app";
 
 .howMuchIs {
-  padding-top: 48px;
+  padding-top: vw(48);
+
+  @include tablet() {
+    padding-top: 48px;
+  }
 
   @include desktop() {
     padding-top: 67px;
@@ -11,53 +15,81 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 125px;
+    margin-top: vw(125);
+
+    @include tablet() {
+      margin-top: 125px;
+    }
 
     @include desktop() {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 30px;
-      margin-top: 142px;
+      align-items: stretch;
+      grid-column-gap: vw(30);
+      margin-top: vw(142);
+
+      @include tablet() {
+        grid-column-gap: 30px;
+        margin-top: 142px;
+      }
     }
 
     .card {
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-radius: 36px;
-      padding: 118px 28px 32px;
+      border-radius: vw(36);
+      padding: vw(118) vw(28) vw(32);
       position: relative;
 
+      @include tablet() {
+        border-radius: 36px;
+        padding: 118px 28px 32px;
+      }
+
       &:not(:first-child) {
-        margin-top: 110px;
+        margin-top: vw(110);
+
+        @include tablet() {
+          margin-top: 110px;
+        }
 
         @include desktop() {
           margin-top: 0;
         }
       }
 
-
-
-
-
-
       &_light {
-        box-shadow: -3px -3px 5px #FFFFFF, 0px 0px 5px #D6D6E1;
+        box-shadow: vw(-3) vw(-3) vw(5) #FFFFFF, 0 0 vw(5) #D6D6E1;
+
+        @include tablet() {
+          box-shadow: -3px -3px 5px #FFFFFF, 0px 0px 5px #D6D6E1;
+        }
       }
 
       &_dark {
-        box-shadow: -3px -3px 5px #30343A, 3px 3px 5px #24262C;
+        box-shadow: vw(-3) vw(-3) vw(5) #30343A, vw(3) vw(3) vw(5) #24262C;
+
+        @include tablet() {
+          box-shadow: -3px -3px 5px #30343A, 3px 3px 5px #24262C;
+        }
       }
 
       .iconWrapper {
         position: absolute;
         top: 0;
         left: 50%;
-        width: 160px;
-        height: 160px;
-        border-radius: 58px;
+        width: vw(160);
+        height: vw(160);
+        border-radius: vw(58);
         transform: translate(-50%, -50%);
         @include center();
+
+        @include tablet() {
+          width: 160px;
+          height: 160px;
+          border-radius: 58px;
+        }
 
         .back {
           position: absolute;
@@ -65,62 +97,99 @@
           left: 0;
           width: 100%;
           height: 100%;
-          border-radius: 58px;
+          border-radius: vw(58);
           opacity: 0.1;
+
+          @include tablet() {
+            border-radius: 58px;
+          }
         }
 
         svg {
           position: relative;
           z-index: 2;
+          width: vw(73);
+          height: vw(73);
+
+          @include tablet() {
+            width: 73px;
+            height: 73px;
+          }
+
         }
       }
 
       .title {
         font-style: normal;
         font-weight: 500;
-        font-size: 33px;
-        line-height: 40px;
+        font-size: vw(33);
+        line-height: vw(40);
         text-align: center;
+
+        @include tablet() {
+          font-size: 33px;
+          line-height: 40px;
+        }
       }
 
       .text {
-        margin-top: 32px;
+        flex-grow: 1;
+        margin-top: vw(32);
         font-style: normal;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
+        font-size: vw(16);
+        line-height: vw(20);
         text-align: center;
+
+        @include tablet() {
+          margin-top: 32px;
+          font-size: 16px;
+          line-height: 20px;
+        }
       }
 
       .price {
-        margin-top: 32px;
+        margin-top: vw(32);
         font-style: normal;
         font-weight: 500;
-        font-size: 50px;
-        line-height: 61px;
+        font-size: vw(50);
+        line-height: vw(61);
         text-align: center;
+
+        @include tablet() {
+          margin-top: 32px;
+          font-size: 50px;
+          line-height: 61px;
+        }
       }
 
       .btn {
-        margin-top: 20px;
+        margin-top: vw(20);
         border: none;
         cursor: pointer;
         background: linear-gradient(90deg, #44A1F6 0%, #2962F4 100%);
-        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.25);
-        border-radius: 44px;
+        box-shadow: inset 0 vw(-2) 0 rgba(0, 0, 0, 0.25);
+        border-radius: vw(44);
         @include center();
         font-style: normal;
         font-weight: 500;
-        font-size: 17px;
-        line-height: 21px;
+        font-size: vw(17);
+        line-height: vw(21);
         text-transform: uppercase;
         color: #FFFFFF;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        padding: 20px 45px;
+        text-shadow: 0 vw(4) vw(4) rgba(0, 0, 0, 0.25);
+        padding: vw(20) vw(45);
+
+        @include tablet() {
+          margin-top: 20px;
+          box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.25);
+          border-radius: 44px;
+          font-size: 17px;
+          line-height: 21px;
+          text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          padding: 20px 45px;
+        }
       }
-
     }
-
   }
-
 }

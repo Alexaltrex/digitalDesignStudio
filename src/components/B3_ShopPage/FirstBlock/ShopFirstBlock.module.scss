@@ -1,0 +1,71 @@
+@import "../../../assets/scss/app";
+
+.ShopFirstBlock {
+  padding-top: vw(115);
+  display: flex;
+  flex-direction: column;
+
+  @include tablet() {
+    padding-top: 115px;
+  }
+
+  @include desktop() {
+    padding-top: 80px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .firstBlock {
+    .text {
+      @include onlyDesktop() {
+        margin-top: 80px;
+        width: 395px;
+        font-weight: 300;
+        font-size: 31px;
+        line-height: 38px;
+      }
+    }
+  }
+
+  .secondBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: vw(35);
+
+    @include tablet() {
+      margin-top: 35px;
+    }
+
+    @include desktop() {
+      flex-grow: 1;
+      @include center();
+      margin-top: 0;
+    }
+
+    img {
+      width: 100%;
+
+      @include desktop() {
+        width: 634px;
+        height: 436px;
+      }
+    }
+
+    .text {
+      @include onlyMobile(){
+        margin-top: vw(40);
+        text-align: center;
+        font-weight: 300;
+        font-size: vw(31);
+        line-height: vw(38);
+
+        @include tablet() {
+          margin-top: 40px;
+          font-size: 31px;
+          line-height: 38px;
+        }
+      }
+    }
+  }
+}

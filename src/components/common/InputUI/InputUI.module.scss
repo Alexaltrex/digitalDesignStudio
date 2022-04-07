@@ -1,18 +1,34 @@
+@import "../../../assets/scss/app";
+
 .inputUI {
   width: 100%;
-  height: 80px;
-  border-radius: 19px;
-  padding: 24px;
+  height: vw(80);
+  border-radius: vw(19);
+  padding: vw(24);
   box-sizing: border-box;
+
+  @include tablet() {
+    height: 80px;
+    border-radius: 19px;
+    padding: 24px;
+  }
 
   &_light {
     background: #FFFFFF;
-    box-shadow: inset -3px -3px 5px #FFFFFF, inset 3px 3px 5px #D6D6E1;
+    box-shadow: inset vw(-3) vw(-3) vw(5) #FFFFFF, inset vw(3) vw(3) vw(5) #D6D6E1;
+
+    @include tablet() {
+      box-shadow: inset -3px -3px 5px #FFFFFF, inset 3px 3px 5px #D6D6E1;
+    }
   }
 
   &_dark {
     background: #23272C;
-    box-shadow: inset -3px -3px 5px #30343A, inset 3px 3px 5px #24262C;
+    box-shadow: inset vw(-3) vw(-3) vw(5) #30343A, inset vw(3) vw(3) vw(5) #24262C;
+
+    @include tablet() {
+      box-shadow: inset -3px -3px 5px #30343A, inset 3px 3px 5px #24262C;
+    }
   }
 
   .input {
@@ -21,8 +37,13 @@
     outline: none;
     background: none;
     font-weight: 300;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: vw(24);
+    line-height: vw(29);
+
+    @include tablet() {
+      font-size: 24px;
+      line-height: 29px;
+    }
 
     &_light {
       color: #292D32;
@@ -35,9 +56,13 @@
     &::placeholder {
       color: grey;
       font-weight: 300;
-      font-size: 24px;
-      line-height: 29px;
-    }
+      font-size: vw(24);
+      line-height: vw(29);
 
+      @include tablet() {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
   }
 }

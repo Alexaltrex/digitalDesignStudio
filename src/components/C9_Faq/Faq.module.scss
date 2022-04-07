@@ -1,7 +1,80 @@
 @import "../../assets/scss/app";
 
 .faq {
-  padding-top: 90px;
+  padding-top: vw(90);
 
+  @include tablet() {
+    padding-top: 90px;
+  }
 
+  .cards {
+    max-width: vw(540);
+    margin: vw(28) auto 0;
+
+    @include tablet() {
+      max-width: 540px;
+      margin: 28px auto 0;
+    }
+
+    @include desktop() {
+      margin-top: 72px;
+    }
+
+    .item {
+      cursor: pointer;
+      padding: vw(24) 0;
+      border-radius: vw(14);
+      background: linear-gradient(87.74deg, rgba(255, 255, 255, 0) -15.35%, rgba(255, 255, 255, 0.05) 15.89%, rgba(255, 255, 255, 0) 41.52%), rgba(196, 196, 196, 0.05);
+      box-shadow: vw(15) vw(10) vw(20) rgba(0, 0, 0, 0.1), inset 0 vw(-2) vw(1) rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(30px);
+
+      @include tablet() {
+        padding: 24px 0;
+        border-radius: 14px;
+        box-shadow: 15px 10px 20px rgba(0, 0, 0, 0.1), inset 0px -2px 1px rgba(255, 255, 255, 0.1);
+      }
+
+      &:not(:first-child) {
+        margin-top: vw(16);
+
+        @include tablet() {
+          margin-top: 16px;
+        }
+      }
+
+      .title {
+        user-select: none;
+        font-weight: bold;
+        font-size: vw(20);
+        line-height: vw(24);
+        padding-left: vw(18);
+        padding-right: vw(70);
+
+        @include tablet() {
+          font-size: 20px;
+          line-height: 24px;
+          padding-left: 18px;
+          padding-right: 70px;
+        }
+      }
+
+      .text {
+        user-select: none;
+        margin-top: vw(15);
+        font-weight: normal;
+        font-size: vw(15);
+        line-height: vw(18);
+        padding-left: vw(40);
+        padding-right: vw(20);
+
+        @include tablet() {
+          margin-top: 15px;
+          font-size: 15px;
+          line-height: 18px;
+          padding-left: 40px;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
 }

@@ -1,7 +1,11 @@
 @import "../../../assets/scss/app";
 
 .container {
-  padding: 0 32px;
+  padding: 0 vw(32);
+
+  @include tablet() {
+    padding: 0 32px;
+  }
 
   @include desktop() {
     padding: 0;

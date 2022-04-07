@@ -1,3 +1,5 @@
+@import "../../../assets/scss/app";
+
 .h2Wrapper {
   display: flex;
   align-items: center;
@@ -5,15 +7,27 @@
   .h2 {
     font-style: normal;
     font-weight: bold;
-    font-size: 60px;
-    line-height: 73px;
+    font-size: vw(60);
+    line-height: vw(73);
+
+    @include tablet() {
+      font-size: 60px;
+      line-height: 73px;
+    }
   }
 
   .line {
-    width: 160px;
-    height: 2px;
-    border-radius: 1px;
+    width: vw(160);
+    height: vw(2);
+    border-radius: vw(1);
     background: linear-gradient(90deg, #E744F6 0%, #18F5F5 50.08%, #3F5EFB 100%);
-    margin-left: 24px;
+    margin-left: vw(24);
+
+    @include tablet() {
+      width: 160px;
+      height: 2px;
+      border-radius: 1px;
+      margin-left: 24px;
+    }
   }
 }

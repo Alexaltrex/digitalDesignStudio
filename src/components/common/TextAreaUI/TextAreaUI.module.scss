@@ -1,9 +1,16 @@
+@import "../../../assets/scss/app";
+
 .textAreaUI {
   width: 100%;
   height: auto;
-  border-radius: 19px;
-  padding: 24px;
+  border-radius: vw(19);
+  padding: vw(24);
   box-sizing: border-box;
+
+  @include tablet() {
+    border-radius: 19px;
+    padding: 24px;
+  }
 
   &_light {
     background: #FFFFFF;
@@ -22,8 +29,13 @@
     outline: none;
     background: none;
     font-weight: 300;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: vw(24);
+    line-height: vw(29);
+
+    @include tablet() {
+      font-size: 24px;
+      line-height: 29px;
+    }
 
     &_light {
       color: #292D32;
@@ -36,9 +48,13 @@
     &::placeholder {
       color: grey;
       font-weight: 300;
-      font-size: 24px;
-      line-height: 29px;
-    }
+      font-size: vw(24);
+      line-height: vw(29);
 
+      @include tablet() {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
   }
 }

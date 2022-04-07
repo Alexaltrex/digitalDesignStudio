@@ -1,6 +1,5 @@
 .app {
 
-
   &_light1 {
     background: #FFEAD7;
     color: #292D32;
@@ -17,4 +16,12 @@
     background: #27292C;
     color: #FFF;
   }
+
+  &_hide {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
+
+// light #292D32;  rgba(239, 238, 243, 1)
+// dark #25303F;  rgba(37, 48, 63, 1)

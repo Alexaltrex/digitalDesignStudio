@@ -1,0 +1,5 @@
+@use "sass:math";
+
+@function vw($value) {
+  @return #{($value * 100 / 576)}vw;
+}

@@ -5,8 +5,6 @@ import {H2} from "../common/H2/H2";
 import SwiperClass from "swiper/types/swiper-class";
 import "swiper/css";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {useSelector} from "react-redux";
-import {selectLang} from "../../store/reducers/app.reducer";
 import {svgIcons} from "../../assets/svg/svgIcons";
 import {Pagination} from "../common/Pagination/Pagination";
 
@@ -51,7 +49,8 @@ export const OurPartners = () => {
         <Container classNameInner={style.ourPartners}>
             <H2 text="Our partners"/>
 
-            <Swiper slidesPerView="auto"
+            <Swiper data-aos="fade-up"
+                    slidesPerView="auto"
                     slidesPerGroup={1}
                     onSwiper={(swiper) => {
                         setSwiper(swiper);
@@ -79,7 +78,7 @@ export const OurPartners = () => {
 
             <Pagination dotsNumber={slides.length}
                         currentIndex={currentIndex}
-                        onClick={(index: number) =>  swiper?.slideTo(index)}
+                        onClick={(index: number) => swiper?.slideTo(index)}
                         className={style.pagination}
             />
 

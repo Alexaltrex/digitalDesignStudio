@@ -1,41 +1,26 @@
 import {Container} from "../common/Container/Container";
-import React from "react";
+import React, {useState} from "react";
 import style from "./howMuchIs.module.scss"
 import {H2} from "../common/H2/H2";
 import clsx from "clsx";
-import {useSelector} from "react-redux";
-import {selectLang, selectThemeType} from "../../store/reducers/app.reducer";
-import {svgIcons} from "../../assets/svg/svgIcons";
+import {useDispatch, useSelector} from "react-redux";
+import {appAC, selectLang, selectShowModal, selectThemeType} from "../../store/reducers/app.reducer";
 import {translate} from "../../utils/lang";
-
-const cards = [
-    {
-        title: "Landing Page",
-        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
-        price: 200,
-        background: "#0085FF",
-    },
-    {
-        title: "Corporative",
-        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
-        price: 270,
-        background: "#00FFAF",
-    },
-    {
-        title: "E-commerce",
-        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
-        price: 380,
-        background: "#F9C835",
-    },
-];
-
+import {HowMuchIsModal} from "../A3_Modals/HowMuchIsModal/HowMuchIsModal";
+import {cards, ICard} from "./constants";
 
 export const HowMuchIs = () => {
     const themeType = useSelector(selectThemeType);
+    const showModal = useSelector(selectShowModal);
     const lang = useSelector(selectLang);
+    const [card, setCard] = useState<null | ICard>(null);
+
+    const dispatch = useDispatch();
 
     return (
         <Container classNameInner={style.howMuchIs}>
+
+            {showModal.show && showModal.type === 'how much is' && <HowMuchIsModal card={card}/>}
 
             <H2 text="How much is"/>
 
@@ -43,6 +28,7 @@ export const HowMuchIs = () => {
                 {
                     cards.map((card, index) => (
                         <div key={index}
+                             data-aos="fade-up"
                              className={clsx({
                                  [style.card]: true,
                                  [style.card_light]: themeType === "light",
@@ -53,25 +39,31 @@ export const HowMuchIs = () => {
                                 <div className={style.back}
                                      style={{background: card.background}}
                                 />
-                                {/*@ts-ignore*/}
-                                {svgIcons[`howMuchIs${index}`]}
+                                {card.icon}
                             </div>
 
-                            <p className={style.title}>
+                            <p className={style.title} data-aos="fade-up">
                                 {translate(card.title, lang)}
                             </p>
 
-                            <p className={style.text}>
+                            <p className={style.text} data-aos="fade-up">
                                 {translate(card.text, lang)}
                             </p>
 
                             <p className={style.price}
                                style={{color: card.background}}
+                               data-aos="fade-up"
                             >
                                 {`${card.price}$`}
                             </p>
 
-                            <button className={style.btn}>
+                            <button className={style.btn}
+                                    onClick={() => {
+                                        setCard(card);
+                                        dispatch(appAC.setShowModal({show: true, type: 'how much is'}));
+                                    }}
+                                    data-aos="fade-up"
+                            >
                                 {translate("Make an order", lang)}
                             </button>
 

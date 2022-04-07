@@ -1,62 +1,107 @@
 @import "../../assets/scss/app";
 
 .portfolio {
-  padding-top: 48px;
+  padding-top: vw(48);
+
+  @include tablet() {
+    padding-top: 48px;
+  }
 
   @include desktop() {
-    padding-top: 68px;
+    padding-top: vw(68);
+
+    @include tablet() {
+      padding-top: 68px;
+    }
   }
 
   .images {
-    overflow: scroll;
-    margin-top: 40px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-top: vw(40);
+    //margin-top: 40px;
+
+    @include tablet() {
+      margin-top: 40px;
+    }
 
     .inner {
-      width: 1110px;
+      width: vw(1110);
+      //width: 1110px;
       display: flex;
+
+      @include tablet() {
+        width: 1110px;
+      }
 
       .left {
         flex-grow: 0;
 
-        div {
+        .row {
           display: flex;
 
-          img:last-child {
-            margin-left: 30px;
+          &:last-child {
+            margin-top: vw(30);
+
+            @include tablet() {
+              margin-top: 30px;
+            }
+          }
+
+          a {
+            display: block;
+            text-decoration: none;
+          }
+
+          a:last-child {
+            margin-left: vw(30);
+
+            @include tablet() {
+              margin-left: 30px;
+            }
           }
         }
+      }
 
-        div:last-child {
-          margin-top: 30px;
+      .right {
+        margin-left: vw(30);
+
+        @include tablet() {
+          margin-left: 30px;
         }
       }
-
-      & > img {
-        margin-left: 30px;
-      }
-
     }
   }
 
   .btn {
     text-decoration: none;
-    display: block;
-    margin: 53px auto 0;
-    height: 50px;
-    border-radius: 25px;
-    width: 160px;
-    @include center();
-
-    @include desktop() {
-      margin: 60px auto 0;
-    }
-
-    font-size: 16px;
-    line-height: 20px;
+    margin: vw(53) auto 0;
+    height: vw(50);
+    border-radius: vw(25);
+    width: vw(160);
+    font-size: vw(16);
+    line-height: vw(20);
     display: flex;
     align-items: center;
     text-align: center;
+    @include center();
 
+    @include tablet() {
+      margin: 53px auto 0;
+      height: 50px;
+      border-radius: 25px;
+      width: 160px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include desktop() {
+      margin: vw(60) auto 0;
+
+      @include tablet() {
+        margin: 60px auto 0;
+      }
+    }
 
     &_light {
       color: #292D32;

@@ -1,10 +1,15 @@
 @import "../../assets/scss/app";
 
 .footer {
-  padding-top: 90px;
-  padding-bottom: 32px;
+  padding-top: vw(90);
+  padding-bottom: vw(32);
   display: flex;
   flex-direction: column;
+
+  @include tablet() {
+    padding-top: 90px;
+    padding-bottom: 32px;
+  }
 
   @include desktop() {
     flex-direction: row;
@@ -22,8 +27,13 @@
     }
 
     .logo, logo svg {
-      width: 190px;
-      height: 69px;
+      width: vw(190);
+      height: vw(69);
+
+      @include tablet() {
+        width: 190px;
+        height: 69px;
+      }
     }
 
     .theme {
@@ -43,18 +53,23 @@
 
   .secondMobileBlock {
     @include onlyMobile(flex) {
-      margin-top: 27px;
+      margin-top: vw(27);
       justify-content: space-between;
+
+      @include tablet() {
+        margin-top: 27px;
+      }
     }
   }
 
   .thirdBlock {
-    margin-top: 38px;
+    margin-top: vw(38);
     display: flex;
     flex-direction: column;
-    //justify-content: space-between;
-    //align-items: flex-end;
 
+    @include tablet() {
+      margin-top: 38px;
+    }
 
     @include desktop() {
       flex-direction: column;
@@ -67,7 +82,11 @@
     .bottom {
       display: flex;
       align-items: center;
-      margin-top: 38px;
+      margin-top: vw(38);
+
+      @include tablet() {
+        margin-top: 38px;
+      }
 
       @include desktop() {
         margin-top: 58px;
@@ -99,18 +118,23 @@
           flex-grow: unset;
         }
 
-
         .copy {
-          @include onlyMobile();
+          @include onlyMobile(){
+            font-weight: normal;
+            font-size: vw(14);
+            line-height: vw(17);
+
+            @include tablet() {
+              font-size: 14px;
+              line-height: 17px;
+            }
+          }
         }
 
         .social {
 
         }
       }
-
     }
-
   }
-
 }

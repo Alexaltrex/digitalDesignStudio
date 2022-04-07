@@ -1,9 +1,13 @@
 @import "../../assets/scss/app";
 
 .dds {
-  padding-top: 64px;
+  padding-top: vw(64);
   display: flex;
   flex-direction: column;
+
+  @include tablet() {
+    padding-top: 64px;
+  }
 
   @include desktop() {
     padding-top: 130px;
@@ -19,7 +23,11 @@
     }
 
     img {
-      width: 300px;
+      width: vw(300);
+
+      @include tablet() {
+        width: 300px;
+      }
 
       @include desktop() {
         height: 500px;
@@ -32,7 +40,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 48px;
+    margin-top: vw(48);
+
+    @include tablet() {
+      margin-top: 48px;
+    }
 
     @include desktop() {
       margin-top: 0;
@@ -44,33 +56,47 @@
     .title {
       font-style: normal;
       font-weight: bold;
-      font-size: 80px;
-      line-height: 98px;
+      font-size: vw(80);
+      line-height: vw(98);
       display: flex;
       align-items: center;
-      display: flex;
       flex-direction: column;
-      align-items: center;
+
+      @include tablet() {
+        font-size: 80px;
+        line-height: 98px;
+      }
 
       @include desktop() {
         align-items: flex-start;
       }
 
       p:not(:first-child) {
-        margin-top: -10px;
+        margin-top: vw(-10);
+
+        @include tablet() {
+          margin-top: -10px;
+        }
       }
 
     }
 
 
     .text {
-      margin-top: 17px;
+      margin-top: vw(17);
       font-style: normal;
       font-weight: 300;
-      font-size: 31px;
-      line-height: 38px;
+      font-size: vw(31);
+      line-height: vw(38);
       text-align: center;
-      width: 386px;
+      width: vw(386);
+
+      @include tablet() {
+        margin-top: 17px;
+        font-size: 31px;
+        line-height: 38px;
+        width: 386px;
+      }
 
       @include desktop() {
         text-align: left;
@@ -84,25 +110,36 @@
       border: none;
       font-style: normal;
       font-weight: bold;
-      font-size: 20px;
-      line-height: 24px;
+      font-size: vw(20);
+      line-height: vw(24);
       display: flex;
       align-items: center;
       text-align: center;
       text-transform: uppercase;
       color: #FFFFFF;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      text-shadow: 0px vw(4) vw(4) rgba(0, 0, 0, 0.25);
       background: linear-gradient(90deg, #44A1F6 0%, #2962F4 100%);
-      box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.25);
-      border-radius: 40px;
-      padding: 28px 70px;
-      margin-top: 16px;
+      box-shadow: inset 0 vw(-2) 0px rgba(0, 0, 0, 0.25);
+      border-radius: vw(40);
+      padding: vw(28) vw(70);
+      margin-top: vw(16);
+
+      @include tablet() {
+        font-size: 20px;
+        line-height: 24px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 40px;
+        padding: 28px 70px;
+        margin-top: 16px;
+      }
 
       @include desktop() {
         margin-top: 45px;
       }
     }
-
-
   }
 }
+
+
+

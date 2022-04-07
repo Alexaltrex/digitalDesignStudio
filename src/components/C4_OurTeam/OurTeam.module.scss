@@ -1,69 +1,103 @@
 @import "../../assets/scss/app";
 
 .ourTeam {
-  padding-top: 68px;
+  padding-top: vw(68);
+
+  @include tablet() {
+    padding-top: 68px;
+  }
 
   @include desktop() {
     padding-top: 108px;
   }
 
   .swiper {
-    margin-top: 50px;
+    margin-top: vw(50);
+
+    @include tablet() {
+      margin-top: 50px;
+    }
 
     @include desktop() {
       margin-top: 70px;
     }
 
     .slide {
-      width: 255px;
-      height: 342px;
-      padding-top: 80px;
-      padding-bottom: 42px;
+      width: vw(255);
+      height: vw(342);
+      padding-top: vw(80);
+      padding-bottom: vw(42);
       box-sizing: border-box;
 
+      @include tablet() {
+        width: 255px;
+        height: 342px;
+        padding-top: 80px;
+        padding-bottom: 42px;
+      }
+
       .inner {
-        height: 220px;
+        height: vw(220);
         box-sizing: border-box;
         background: linear-gradient(85.96deg, rgba(255, 255, 255, 0) -20.51%, rgba(255, 255, 255, 0.05) 26.82%, rgba(255, 255, 255, 0) 65.65%), rgba(196, 196, 196, 0.05);
         box-shadow: 11px 17px 29px rgba(0, 0, 0, 0.05), inset 0px -2px 1px rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(30px);
-        border-radius: 36px;
-        padding-top: 100px;
+        border-radius: vw(36);
+        padding-top: vw(100);
         display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
 
+        @include tablet() {
+          height: 220px;
+          border-radius: 36px;
+          padding-top: 100px;
+        }
+
         img {
           position: absolute;
-          width: 160px;
-          height: 160px;
+          width: vw(160);
+          height: vw(160);
           left: 50%;
           transform: translate(-50%);
-          top: -80px;
+          top: vw(-80);
+
+          @include tablet() {
+            width: 160px;
+            height: 160px;
+            top: -80px;
+          }
         }
 
         .name {
-          width: 204px;
+          width: vw(204);
           font-weight: 500;
-          font-size: 24px;
-          line-height: 29px;
+          font-size: vw(24);
+          line-height: vw(29);
           text-align: center;
+
+          @include tablet() {
+            width: 204px;
+            font-size: 24px;
+            line-height: 29px;
+          }
         }
 
         .job {
-          margin-top: 12px;
+          margin-top: vw(12);
           font-weight: 500;
-          font-size: 16px;
-          line-height: 20px;
+          font-size: vw(16);
+          line-height: vw(20);
           text-align: center;
+
+          @include tablet() {
+            margin-top: 12px;
+            font-size: 16px;
+            line-height: 20px;
+          }
         }
-
       }
-
-
     }
   }
-
-
 }

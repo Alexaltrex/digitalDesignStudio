@@ -1,55 +1,100 @@
 @import "../../../assets/scss/app";
 
 .bigForm {
-  padding-top: 75px;
+  padding-top: vw(75);
+
+  @include tablet() {
+    padding-top: 75px;
+  }
 
   @include desktop() {
     padding-top: 88px;
   }
 
+  .fieldWrapper {
+    position: relative;
+
+    .error {
+      position: absolute;
+      left: 20px;
+      bottom: 0px;
+      transform: translateY(100%);
+      color: red;
+    }
+  }
+
   .text {
-    margin-top: 35px;
+    margin-top: vw(35);
     font-weight: 300;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: vw(24);
+    line-height: vw(29);
+
+    @include tablet() {
+      margin-top: 35px;
+      font-size: 24px;
+      line-height: 29px;
+    }
   }
 
   .formik {
-    margin-top: 50px;
+    margin-top: vw(50);
+
+    @include tablet() {
+      margin-top: 50px;
+    }
 
     .topRow {
       display: grid;
       grid-template-rows: repeat(3, 1fr);
-      grid-row-gap: 24px;
+      grid-row-gap: vw(24);
+
+      @include tablet() {
+        grid-row-gap: 24px;
+      }
 
       @include desktop() {
         grid-template-rows: 1fr;
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 30px;
+        grid-column-gap: vw(30);
+
+        @include tablet() {
+          grid-column-gap: 30px;
+        }
       }
     }
 
     .bottomRow {
-      margin-top: 24px;
+      margin-top: vw(24);
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @include tablet() {
+        margin-top: 24px;
+      }
 
       @include desktop() {
         flex-direction: row;
       }
 
+      .textArea {
+        width: 100%;
+        flex-grow: 1;
+      }
+
       .btn {
         flex-shrink: 0;
-        margin-top: 50px;
+        margin-top: vw(50);
+
+        @include tablet() {
+          margin-top: 50px;
+        }
+
         @include desktop() {
-          margin-top: 0px;
+          margin-top: 0;
           margin-left: 30px;
         }
       }
     }
-
-
   }
-
 }

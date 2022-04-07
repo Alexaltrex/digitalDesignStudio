@@ -1,0 +1,373 @@
+@import "../../../assets/scss/app";
+
+@mixin firstMobile {
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: vw(35);
+
+  @include tablet() {
+    margin-top: 35px;
+  }
+
+  .imgWrapper {
+    margin-left: vw(18);
+    width: vw(269);
+    height: vw(244);
+
+    @include tablet() {
+      margin-left: 18px;
+      width: 269px;
+      height: 244px;
+    }
+
+    img {
+      width: vw(269);
+      height: vw(244);
+
+      @include tablet() {
+        width: 269px;
+        height: 244px;
+      }
+    }
+  }
+
+  .textBlock {
+    flex-grow: 1;
+  }
+}
+
+@mixin secondMobile {
+  align-items: center;
+  margin-top: vw(35);
+
+  @include tablet() {
+    margin-top: 35px;
+  }
+
+  .imgWrapper {
+    margin-right: vw(18);
+    width: vw(269);
+    height: vw(244);
+
+    @include tablet() {
+      margin-right: 18px;
+      width: 269px;
+      height: 244px;
+    }
+
+    img {
+      width: vw(269);
+      height: vw(244);
+
+      @include tablet() {
+        width: 269px;
+        height: 244px;
+      }
+    }
+  }
+
+  .textBlock {
+    flex-grow: 1;
+  }
+}
+
+@mixin firstDesktop {
+  margin-top: 90px;
+  align-items: center;
+
+  .imgWrapper {
+    width: vw(730);
+    height: vw(400);
+    margin-right: vw(95);
+    flex-shrink: 0;
+
+    @include tablet() {
+      width: 730px;
+      height: 400px;
+      margin-right: 95px;
+    }
+
+    img {
+      width: vw(730);
+      height: vw(400);
+
+      @include tablet() {
+        width: 730px;
+        height: 400px;
+      }
+    }
+  }
+
+}
+
+@mixin secondDesktop {
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  margin-top: vw(52);
+
+  @include tablet() {
+    margin-top: 52px;
+  }
+
+  .imgWrapper {
+    width: vw(445);
+    height: vw(350);
+    margin-left: vw(157);
+
+    @include tablet() {
+      width: 445px;
+      height: 350px;
+      margin-left: 157px;
+    }
+
+    img {
+      width: vw(445);
+      height: vw(350);
+
+      @include tablet() {
+        width: 445px;
+        height: 350px;
+      }
+    }
+  }
+
+  .textBlock {
+    width: vw(223);
+
+    @include tablet() {
+      width: 223px;
+    }
+  }
+}
+
+@mixin thirdDesktop {
+  margin-top: -50px;
+  align-items: flex-end;
+
+  .imgWrapper {
+    width: 445px;
+    height: 350px;
+    margin-left: 95px;
+    margin-right: 95px;
+
+    img {
+      width: 445px;
+      height: 350px;
+    }
+  }
+
+  .textBlock {
+    width: 223px;
+  }
+}
+
+.portfolioItems {
+  overflow: hidden;
+  padding-top: vw(115);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  @include tablet() {
+    padding-top: 115px;
+  }
+
+  @include desktop() {
+    padding-top: 80px;
+  }
+
+  .menu {
+    margin-top: 23px;
+
+    @include tablet() {
+      margin-top: vw(23);
+    }
+
+    @include desktop() {
+      margin-top: 13px;
+    }
+
+    .inner {
+      margin-left: -10px;
+      margin-right: -10px;
+      display: flex;
+      flex-wrap: wrap;
+
+      @include tablet() {
+        margin-left: vw(-10);
+        margin-right: vw(-10);
+      }
+
+      @include desktop() {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+
+      .item {
+        cursor: pointer;
+        padding: vw(10) vw(20);
+        border-radius: vw(37);
+        font-weight: bold;
+        font-size: vw(30);
+        line-height: vw(37);
+        margin: vw(20) vw(10) 0;
+
+        @include tablet() {
+          padding: 10px 20px;
+          border-radius: 37px;
+          font-size: 30px;
+          line-height: 37px;
+          margin: 20px 10px 0;
+        }
+
+        @include desktop() {
+          padding: 20px 90px;
+          margin: 30px 20px 0;
+        }
+
+        p {
+          font-weight: bold;
+          font-size: vw(24);
+          line-height: 120%;
+
+          @include tablet() {
+            font-size: 24px;
+          }
+
+          @include desktop() {
+            font-size: 30px;
+          }
+        }
+
+        &_light {
+          //box-shadow: inset -3px -3px 5px #FFFFFF, inset 3px 3px 5px #D6D6E1;
+          box-shadow: -3px -3px 5px #FFFFFF, 0px 0px 5px #D6D6E1;
+          p {
+            color: #292D32;
+            opacity: 0.2;
+          }
+        }
+
+        &_dark {
+          //box-shadow: inset -3px -3px 5px #30343A, inset 3px 3px 5px #24262C;
+          box-shadow: -3px -3px 5px #30343A, 3px 3px 5px #24262C;
+          p {
+            color: #FFF;
+            opacity: 0.2;
+          }
+        }
+
+        &_selected_light {
+          //box-shadow: -3px -3px 5px #FFFFFF, 0px 0px 5px #D6D6E1;
+          box-shadow: inset -3px -3px 5px #FFFFFF, inset 3px 3px 5px #D6D6E1;
+          p {
+            opacity: 1;
+          }
+        }
+
+        &_selected_dark {
+          //box-shadow: -3px -3px 5px #30343A, 3px 3px 5px #24262C;
+          box-shadow: inset -3px -3px 5px #30343A, inset 3px 3px 5px #24262C;
+          p {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .items {
+    margin-top: vw(30);
+
+    @include tablet() {
+      margin-top: 30px;
+    }
+
+    @include desktop() {
+      margin-top: 100px;
+    }
+
+    .item {
+      display: flex;
+
+      .imgWrapper {
+        display: block;
+        border-radius: vw(10);
+        overflow: hidden;
+        flex-shrink: 0;
+
+        @include tablet() {
+          border-radius: 10px;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+
+        img {
+          object-fit: cover;
+          object-position: center;
+          transition: 0.3s;
+        }
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: vw(20);
+        line-height: 160.4%;
+
+        @include tablet() {
+          font-size: 20px;
+        }
+      }
+
+      .text {
+        margin-top: vw(21);
+        font-weight: 500;
+        font-size: vw(15);
+        line-height: vw(18);
+
+        @include tablet() {
+          margin-top: 21px;
+          font-size: 15px;
+          line-height: 18px;
+        }
+      }
+
+      &:nth-child(odd) {
+        @include mobile() {
+          @include firstMobile();
+        }
+      }
+
+      &:nth-child(even) {
+        @include mobile() {
+          @include secondMobile();
+        }
+      }
+
+      //////////////
+
+      &:nth-child(3n-2) {
+        @include desktop() {
+          @include firstDesktop();
+        }
+      }
+
+      &:nth-child(3n-1) {
+        @include desktop() {
+          @include secondDesktop();
+        }
+      }
+
+      &:nth-child(3n) {
+        @include desktop() {
+          @include thirdDesktop;
+        }
+      }
+    }
+  }
+}

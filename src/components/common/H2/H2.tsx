@@ -13,7 +13,7 @@ interface IH2 {
 export const H2: FC<IH2> = ({text, className}) => {
     const lang = useSelector(selectLang);
     return (
-        <div className={style.h2Wrapper}>
+        <div className={style.h2Wrapper} data-aos="fade-up">
             <h2 className={clsx(style.h2, className)}>{translate(text, lang)}</h2>
             <div className={style.line}/>
         </div>

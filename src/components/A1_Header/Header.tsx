@@ -11,22 +11,28 @@ import {LangSwitcher} from "../common/LangSwitcher/LangSwitcher";
 import {Tel} from "../common/Tel/Tel";
 import {Links} from "../common/Links/Links";
 import {BurgerButton} from "../common/BurgerButton/BurgerButton";
+import {HashLink} from "react-router-hash-link";
 
-export const Header: FC = () => {
+interface IHeader {
+    onClick: () => void
+}
+
+export const Header: FC<IHeader> = ({onClick}) => {
     const themeType = useSelector(selectThemeType);
+
     return (
-        <header>
+        <header id="header">
             <Container classNameInner={style.header}>
-                <div className={style.leftBlock}>
+                <HashLink to="/#header" className={style.leftBlock}>
                     <SvgIcon icon={themeType === "light" ? svgIcons.logo_dark : svgIcons.logo_light}/>
-                </div>
+                </HashLink>
 
                 <div className={style.rightBlock}>
 
                     <div className={style.topRow}>
                         <div className={style.topRowLeft}>
                             <ThemeSwitcher/>
-                            <BurgerButton/>
+                            <BurgerButton onClick={() => onClick()}/>
                         </div>
 
                         <div className={style.topRowRight}>

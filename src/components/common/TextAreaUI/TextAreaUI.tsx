@@ -16,7 +16,9 @@ export const TextAreaUI: FC<ITextAreaUI> = ({className, ...props}) => {
             [style.textAreaUI]: true,
             [style.textAreaUI_light]: themeType === "light",
             [style.textAreaUI_dark]: themeType === "dark",
-        }, className)}>
+        }, className)}
+             data-aos="fade-up"
+        >
             <textarea {...props}
                       rows={3}
                       className={clsx({

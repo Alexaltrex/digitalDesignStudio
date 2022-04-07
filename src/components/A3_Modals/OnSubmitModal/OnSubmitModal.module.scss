@@ -1,0 +1,98 @@
+@import "../../../assets/scss/app";
+
+.onSubmitModal {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+
+
+  &_show {
+    display: block;
+  }
+
+  &_light {
+    background: rgba(37, 48, 63, 0.9);
+
+    .content {
+      background: rgba(239, 238, 243, 1);
+    }
+  }
+
+  &_dark {
+    background: rgba(239, 238, 243, 0.9);
+
+    .content {
+      background: rgba(37, 48, 63, 1);
+    }
+  }
+
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: vw(100) vw(35) vw(40);
+
+    backdrop-filter: blur(30px);
+    border-radius: vw(7);
+
+    @include tablet() {
+      padding: 100px 35px 40px;
+      border-radius: 7px;
+    }
+
+    .close {
+      @include button();
+      width: vw(24);
+      height: vw(24);
+      position: absolute;
+      top: vw(14);
+      right: vw(14);
+
+      @include tablet() {
+        width: 24px;
+        height: 24px;
+        top: 14px;
+        right: 14px;
+      }
+
+      svg {
+        width: vw(24);
+        height: vw(24);
+
+        @include tablet() {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .title {
+      font-weight: 500;
+      font-size: vw(33);
+      line-height: vw(40);
+      text-align: center;
+
+      @include tablet() {
+        font-size: 33px;
+        line-height: 40px;
+      }
+    }
+
+    .btn {
+      margin: vw(40) auto 0;
+
+      @include tablet() {
+        margin: 40px auto 0;
+      }
+
+    }
+  }
+
+
+
+}

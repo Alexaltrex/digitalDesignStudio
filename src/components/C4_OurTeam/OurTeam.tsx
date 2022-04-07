@@ -11,8 +11,7 @@ import SwiperClass from 'swiper/types/swiper-class';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {useSelector} from "react-redux";
 import {selectLang} from "../../store/reducers/app.reducer";
-import {translate} from "../../utils/lang";
-import { Pagination } from "../common/Pagination/Pagination";
+import {Pagination} from "../common/Pagination/Pagination";
 
 const slides = [
     {
@@ -65,7 +64,8 @@ export const OurTeam = () => {
     return (
         <Container classNameInner={style.ourTeam}>
             <H2 text="Our team"/>
-            <Swiper slidesPerView="auto"
+            <Swiper data-aos="fade-up"
+                    slidesPerView="auto"
                     slidesPerGroup={1}
                     onSwiper={(swiper) => {
                         setSwiper(swiper);
@@ -88,8 +88,14 @@ export const OurTeam = () => {
                         <SwiperSlide key={index} className={style.slide}>
                             <div className={style.inner}>
                                 <img src={img} alt=""/>
-                                <p className={style.name}>{translate(name, lang)}</p>
-                                <p className={style.job}>{translate(job, lang)}</p>
+                                <p className={style.name}>
+                                    {name}
+                                    {/*{translate(name, lang)}*/}
+                                </p>
+                                <p className={style.job}>
+                                    {job}
+                                    {/*{translate(job, lang)}*/}
+                                </p>
                             </div>
                         </SwiperSlide>
                     ))
@@ -98,7 +104,7 @@ export const OurTeam = () => {
 
             <Pagination dotsNumber={slides.length}
                         currentIndex={currentIndex}
-                        onClick={(index: number) =>  swiper?.slideTo(index)}
+                        onClick={(index: number) => swiper?.slideTo(index)}
             />
 
         </Container>

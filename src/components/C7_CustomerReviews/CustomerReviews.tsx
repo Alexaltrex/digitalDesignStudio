@@ -62,7 +62,8 @@ export const CustomerReviews = () => {
         <Container classNameInner={style.customerReviews}>
             <H2 text="Customer Reviews"/>
 
-            <Swiper slidesPerView="auto"
+            <Swiper data-aos="fade-up"
+                    slidesPerView="auto"
                     slidesPerGroup={1}
                     onSwiper={(swiper) => {
                         setSwiper(swiper);
@@ -106,7 +107,7 @@ export const CustomerReviews = () => {
 
             <Pagination dotsNumber={slides.length}
                         currentIndex={currentIndex}
-                        onClick={(index: number) =>  swiper?.slideTo(index)}
+                        onClick={(index: number) => swiper?.slideTo(index)}
             />
 
         </Container>

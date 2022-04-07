@@ -1,28 +1,45 @@
 @import "../../assets/scss/app";
 
 .aboutUs {
-  padding-top: 100px;
+  padding-top: vw(100);
+
+  @include tablet() {
+    padding-top: 100px;
+  }
 
   @include desktop() {
     padding-top: 94px;
   }
 
   .cardWrapper {
-    margin-top: 86px;
+    margin-top: vw(86);
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    @include tablet() {
+      margin-top: 86px;
+    }
+
     @include desktop() {
       flex-direction: row-reverse;
       align-items: flex-start;
-      margin-top: 60px;
+      margin-top: vw(60);
+
+      @include tablet() {
+        margin-top: 60px;
+      }
     }
 
     .imgWrapper {
-      width: 525px;
-      height: 410px;
+      width: vw(525);
+      height: vw(410);
       position: relative;
+
+      @include tablet() {
+        width: 525px;
+        height: 410px;
+      }
 
       @include desktop() {
         flex-shrink: 0;
@@ -35,27 +52,36 @@
       }
 
       img:last-child {
-        width: 578px;
+        width: vw(578);
         position: absolute;
-        bottom: 20px;
+        bottom: vw(20);
         left: 50%;
         transform: translate(-50%, 100%);
+
+        @include tablet() {
+          width: 578px;
+          bottom: 20px;
+        }
       }
 
     }
 
     .card {
       position: relative;
-      margin-top: -70px;
-
+      margin-top: vw(-70);
       background: linear-gradient(85.96deg, rgba(255, 255, 255, 0) -20.51%, rgba(255, 255, 255, 0.05) 26.82%, rgba(255, 255, 255, 0) 65.65%), rgba(196, 196, 196, 0.05);
-      box-shadow: 15px 10px 20px rgba(0, 0, 0, 0.1), inset 0px -2px 1px rgba(255, 255, 255, 0.1);
+      box-shadow: vw(15) vw(10) vw(20) rgba(0, 0, 0, 0.1), inset 0 vw(-2) vw(1) rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(30px);
-
-      padding: 20px 36px;
+      padding: vw(20) vw(36);
       box-sizing: border-box;
-      border-radius: 36px;
+      border-radius: vw(36);
 
+      @include tablet() {
+        margin-top: -70px;
+        box-shadow: 15px 10px 20px rgba(0, 0, 0, 0.1), inset 0px -2px 1px rgba(255, 255, 255, 0.1);
+        padding: 20px 36px;
+        border-radius: 36px;
+      }
 
       @include desktop() {
         margin-top: 25px;
@@ -66,21 +92,39 @@
       .label {
         font-style: normal;
         font-weight: bold;
-        font-size: 40px;
-        line-height: 49px;
+        font-size: vw(40);
+        line-height: vw(49);
+
+        @include tablet() {
+          font-size: 40px;
+          line-height: 49px;
+        }
       }
 
       .icons {
-        margin-top: 20px;
+        margin-top: vw(20);
         display: flex;
+
+        @include tablet() {
+          margin-top: 20px;
+        }
 
         img {
           display: block;
-          width: 54px;
-          height: 54px;
+          width: vw(54);
+          height: vw(54);
+
+          @include tablet() {
+            width: 54px;
+            height: 54px;
+          }
 
           &:not(:first-child) {
-            margin-left: 13px;
+            margin-left: vw(13);
+
+            @include tablet() {
+              margin-left: 13px;
+            }
           }
         }
       }
@@ -88,9 +132,21 @@
       .text {
         font-style: normal;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-        margin-top: 15px;
+        font-size: vw(16);
+        line-height: vw(20);
+
+        @include tablet() {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+
+      .text1 {
+        margin-top: vw(15);
+
+        @include tablet() {
+          margin-top: 15px;
+        }
 
         @include desktop() {
           margin-top: 32px;
@@ -99,30 +155,49 @@
 
       .icon {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: vw(20);
+        right: vw(20);
+
+        @include tablet() {
+          top: 20px;
+          right: 20px;
+        }
 
         svg {
-          width: 70px;
-          height: 70px;
+          width: vw(70);
+          height: vw(70);
+
+          @include tablet() {
+            width: 70px;
+            height: 70px;
+          }
         }
       }
-
     }
   }
 
   .items {
-    margin-top: 63px;
+    margin-top: vw(63);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 64px;
-    grid-row-gap: 62px;
+    grid-column-gap: vw(64);
+    grid-row-gap: vw(62);
+
+    @include tablet() {
+      margin-top: 63px;
+      grid-column-gap: 64px;
+      grid-row-gap: 62px;
+    }
 
     @include desktop() {
-      margin-top: 82px;
+      margin-top: vw(82);
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto;
+
+      @include tablet() {
+        margin-top: 82px;
+      }
     }
 
     .item {
@@ -131,42 +206,71 @@
       align-items: center;
 
       @include desktop() {
-        width: 223px;
+        width: vw(223);
+
+        @include tablet() {
+          width: 223px;
+        }
       }
 
       .iconWrapper {
-        width: 100px;
-        height: 100px;
-        border-radius: 36px;
+        width: vw(100);
+        height: vw(100);
+        border-radius: vw(36);
         @include center();
 
+        @include tablet() {
+          width: 100px;
+          height: 100px;
+          border-radius: 36px;
+        }
+
         &_light {
-          box-shadow: -3px -3px 5px #FFFFFF, 0px 0px 5px #D6D6E1;
+          box-shadow: -3px -3px 5px #FFFFFF, 0 0 5px #D6D6E1;
         }
 
         &_dark {
           box-shadow: -3px -3px 5px #30343A, 3px 3px 5px #24262C;
         }
+
+        svg {
+          width: vw(65);
+          height: vw(65);
+
+          @include tablet() {
+            width: 65px;
+            height: 65px;
+          }
+        }
+
       }
 
       .title {
-        margin-top: 20px;
+        margin-top: vw(20);
         font-weight: 600;
-        font-size: 20px;
+        font-size: vw(20);
         line-height: 160.4%;
         text-align: center;
+
+        @include tablet() {
+          margin-top: 20px;
+          font-size: 20px;
+        }
       }
 
       .text {
-        margin-top: 20px;
+        margin-top: vw(20);
         font-weight: 500;
-        font-size: 15px;
-        line-height: 18px;
+        font-size: vw(15);
+        line-height: vw(18);
         text-align: center;
+
+        @include tablet() {
+          margin-top: 20px;
+          font-size: 15px;
+          line-height: 18px;
+        }
       }
     }
-
   }
-
-
 }

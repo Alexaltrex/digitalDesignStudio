@@ -1,7 +1,14 @@
+@import "../../../assets/scss/app";
+
 .social {
   display: flex;
-  padding: 8px 14px;
-  border-radius: 17px;
+  padding: vw(8) vw(14);
+  border-radius: vw(17);
+
+  @include tablet() {
+    padding: 8px 14px;
+    border-radius: 17px;
+  }
 
   &_light {
     box-shadow: inset -3px -3px 5px #FFFFFF, inset 3px 3px 5px #D6D6E1;
@@ -12,14 +19,22 @@
   }
 
   .icon {
-    display: block;
-    align-items: center;
+    @include center();
     text-decoration: none;
-    width: 20px;
-    height: 20px;
+    width: vw(20);
+    height: vw(20);
+
+    @include tablet() {
+      width: 20px;
+      height: 20px;
+    }
 
     &:not(:first-child) {
-      margin-left: 15px;
+      margin-left: vw(15);
+
+      @include tablet() {
+        margin-left: 15px;
+      }
     }
 
     &_light {
@@ -46,10 +61,15 @@
       }
     }
 
+    svg {
+      width: vw(20);
+      height: vw(20);
+
+      @include tablet() {
+        width: 20px;
+        height: 20px;
+      }
+    }
 
   }
-
-
-
-
 }

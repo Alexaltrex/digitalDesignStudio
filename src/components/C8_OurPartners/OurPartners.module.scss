@@ -1,27 +1,50 @@
 @import "../../assets/scss/app";
 
 .ourPartners {
-  padding-top: 90px;
+  padding-top: vw(90);
+
+  @include tablet() {
+    padding-top: 90px;
+  }
 
   .swiper {
-    margin-top: 63px;
+    margin-top: vw(63);
+
+    @include tablet() {
+      margin-top: 63px;
+    }
 
     @include desktop() {
       margin-top: 38px;
     }
 
     .slide {
-      width: 181px;
+      width: vw(181);
 
-      svg path {
-        fill: #777F89;
+      @include tablet() {
+        width: 181px;
+      }
+
+      svg {
+        width: vw(181);
+
+        @include tablet() {
+          width: 181px;
+        }
+
+        path {
+          fill: #777F89;
+        }
       }
     }
-
   }
 
   .pagination {
-    margin-top: 40px;
+    margin-top: vw(40);
+
+    @include tablet() {
+      margin-top: 40px;
+    }
 
     @include desktop() {
       margin-top: 50px;

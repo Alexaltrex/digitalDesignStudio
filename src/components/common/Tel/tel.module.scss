@@ -7,17 +7,28 @@
 
   img {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: vw(24);
+    height: vw(24);
+
+    @include tablet() {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   .text {
-    margin-left: 7px;
+    margin-left: vw(7);
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: vw(20);
+    line-height: vw(24);
     text-transform: uppercase;
+
+    @include tablet() {
+      margin-left: 7px;
+      font-size: 20px;
+      line-height: 24px;
+    }
 
     &_light {
       color: #292D32;

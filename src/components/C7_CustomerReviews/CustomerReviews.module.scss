@@ -1,86 +1,149 @@
 @import "../../assets/scss/app";
 
 .customerReviews {
-  padding-top: 100px;
+  padding-top: vw(100);
+
+  @include tablet() {
+    padding-top: 100px;
+  }
 
   .swiper {
-    margin-top: 26px;
+    margin-top: vw(26);
+
+    @include tablet() {
+      margin-top: 26px;
+    }
 
     @include desktop() {
       margin-top: 50px;
     }
 
     .slide {
-      width: 350px;
-      height: 300px;
-      padding-bottom: 25px;
+      width: vw(350);
+      height: vw(300);
+      padding-bottom: vw(25);
       box-sizing: border-box;
 
+      @include tablet() {
+        width: 350px;
+        height: 300px;
+        padding-bottom: 25px;
+      }
+
       .inner {
-        height: 275px;
-        padding: 13px 20px 30px;
+        height: vw(275);
+        padding: vw(13) vw(20) vw(30);
         box-sizing: border-box;
         background: linear-gradient(84.93deg, rgba(255, 255, 255, 0) -18.51%, rgba(255, 255, 255, 0.05) 28.04%, rgba(255, 255, 255, 0) 66.22%), rgba(196, 196, 196, 0.05);
         box-shadow: 15px 10px 20px rgba(0, 0, 0, 0.1), inset 0px -2px 1px rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(30px);
-        border-radius: 36px;
+        border-radius: vw(36);
         position: relative;
+
+        @include tablet() {
+          height: 275px;
+          padding: 13px 20px 30px;
+          border-radius: 36px;
+        }
 
         .topBlock {
           display: flex;
           align-items: center;
 
           .img {
-            width: 104px;
-            height: 104px;
+            width: vw(104);
+            height: vw(104);
+
+            @include tablet() {
+              width: 104px;
+              height: 104px;
+            }
           }
 
           .right {
-            margin-left: 18px;
-            width: 160px;
+            margin-left: vw(18);
+            width: vw(160);
+
+            @include tablet() {
+              margin-left: 18px;
+              width: 160px;
+            }
 
             .name {
               font-weight: bold;
-              font-size: 20px;
-              line-height: 24px;
+              font-size: vw(20);
+              line-height: vw(24);
+
+              @include tablet() {
+                font-size: 20px;
+                line-height: 24px;
+              }
             }
 
             .job {
-              margin-top: 17px;
+              margin-top: vw(17);
               font-weight: 300;
-              font-size: 16px;
-              line-height: 20px;
+              font-size: vw(16);
+              line-height: vw(20);
+
+              @include tablet() {
+                margin-top: 17px;
+                font-size: 16px;
+                line-height: 20px;
+              }
             }
 
             .line {
-              margin-top: 16px;
-              width: 160px;
-              height: 2px;
+              margin-top: vw(16);
+              width: vw(160);
+              height: vw(2);
               background: linear-gradient(90deg, #E744F6 0%, #18F5F5 50.08%, #3F5EFB 100%);
               border-radius: 1px;
+
+              @include tablet() {
+                margin-top: 16px;
+                width: 160px;
+                height: 2px;
+              }
             }
-
           }
-
         }
 
         .text {
-          margin-top: 18px;
+          margin-top: vw(18);
           font-weight: normal;
-          font-size: 15px;
-          line-height: 18px;
+          font-size: vw(15);
+          line-height: vw(18);
+
+          @include tablet() {
+            margin-top: 18px;
+            font-size: 15px;
+            line-height: 18px;
+
+          }
         }
 
         .link {
           position: absolute;
-          bottom: 10px;
-          right: 10px;
+          bottom: vw(10);
+          right: vw(10);
+
+          @include tablet() {
+            bottom: 10px;
+            right: 10px;
+          }
+
+          svg {
+            width: vw(40);
+            height: vw(40);
+
+            @include tablet() {
+              width: 40px;
+              height: 40px;
+            }
+          }
         }
-
-
       }
     }
-
-
   }
 }

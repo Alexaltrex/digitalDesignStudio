@@ -4,16 +4,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
+  padding-top: vw(60);
+
+  @include tablet() {
+    padding-top: 60px;
+  }
 
   @include desktop() {
     flex-direction: row-reverse;
-    padding-top: 100px;
+    padding-top: vw(100);
+
+    @include tablet() {
+      padding-top: 100px;
+    }
   }
 
   .img {
-    width: 578px;
+    width: vw(578);
     height: auto;
+
+    @include tablet() {
+      width: 578px;
+    }
 
     @include desktop() {
       width: 635px;
@@ -22,10 +34,14 @@
   }
 
   .formWrapper {
-    margin-top: 68px;
+    margin-top: vw(68);
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include tablet() {
+      margin-top: 68px;
+    }
 
     @include desktop() {
       margin-top: 0;
@@ -34,9 +50,14 @@
 
     .title {
       font-weight: bold;
-      font-size: 35px;
-      line-height: 43px;
+      font-size: vw(35);
+      line-height: vw(43);
       text-align: center;
+
+      @include tablet() {
+        font-size: 35px;
+        line-height: 43px;
+      }
 
       @include desktop() {
         text-align: left;
@@ -44,11 +65,17 @@
     }
 
     .subtitle {
-      margin-top: 35px;
+      margin-top: vw(35);
       font-weight: 300;
-      font-size: 24px;
-      line-height: 29px;
+      font-size: vw(24);
+      line-height: vw(29);
       text-align: center;
+
+      @include tablet() {
+        margin-top: 35px;
+        font-size: 24px;
+        line-height: 29px;
+      }
 
       @include desktop() {
         text-align: left;
@@ -60,25 +87,50 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 50px;
+      margin-top: vw(50);
+
+      @include tablet() {
+        margin-top: 50px;
+      }
 
       @include desktop() {
         align-items: flex-start;
       }
 
-      .field {
+      .fieldWrapper {
         align-self: stretch;
+        position: relative;
 
         &:not(:first-child) {
-          margin-top: 30px;
+          margin-top: vw(30);
+
+          @include tablet() {
+            margin-top: 30px;
+          }
+        }
+
+        .error {
+          position: absolute;
+          left: 20px;
+          bottom: 0px;
+          transform: translateY(100%);
+          color: red;
         }
       }
 
       .btn {
-        margin-top: 54px;
+        margin-top: vw(54);
+        align-self: center;
+
+        @include tablet() {
+          margin-top: 54px;
+        }
+      }
+
+      .btn2 {
+        align-self: center;
+        margin-top: 10px;
       }
     }
-
   }
-
 }

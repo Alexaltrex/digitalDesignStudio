@@ -30,30 +30,45 @@ export const Portfolio: FC<IPortfolio> = ({
         <Container classNameInner={style.portfolio}>
             <H2 text={title}/>
 
-            <div className={style.images}>
+            <div className={style.images}
+                //data-aos="fade-up"
+            >
                 <div className={style.inner}>
                     <div className={style.left}>
-                        <div>
-                            <img src={img0} alt=""/>
-                            <img src={img1} alt=""/>
+                        <div className={style.row} data-aos="fade-up">
+                            <HashLink to={`/portfolio/0/#header`}>
+                                <img src={img0} alt="" data-aos="fade-up"/>
+                            </HashLink>
+                            <HashLink to={`/portfolio/0/#header`}>
+                                <img src={img1} alt="" data-aos="fade-up"/>
+                            </HashLink>
                         </div>
-                        <div>
-                            <img src={img2} alt=""/>
-                            <img src={img3} alt=""/>
+                        <div className={style.row} data-aos="fade-up">
+                            <HashLink to={`/portfolio/0/#header`}>
+                                <img src={img2} alt="" data-aos="fade-up"/>
+                            </HashLink>
+                            <HashLink to={`/portfolio/0/#header`}>
+                                <img src={img3} alt="" data-aos="fade-up"/>
+                            </HashLink>
                         </div>
                     </div>
-                    <img src={img4} alt=""/>
+                    <HashLink to={`/portfolio/${0}`}
+                              className={style.right}
+                    >
+                        <img src={img4} alt="" data-aos="fade-up"/>
+                    </HashLink>
                 </div>
             </div>
 
             {
                 withButton &&
-                <HashLink to="/portfolio"
+                <HashLink to="/portfolio/#header"
                           className={clsx({
                               [style.btn]: true,
                               [style.btn_light]: themeType === "light",
                               [style.btn_dark]: themeType === "dark",
                           })}
+                          data-aos="fade-up"
                 >
                     <p>{translate("See more", lang)}</p>
                 </HashLink>

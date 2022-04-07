@@ -10,6 +10,7 @@ import {Tel} from "../common/Tel/Tel";
 import {LangSwitcher} from "../common/LangSwitcher/LangSwitcher";
 import {Links} from "../common/Links/Links";
 import {Social} from "../common/Social/Social";
+import {HashLink} from "react-router-hash-link";
 
 export const Footer = () => {
     const themeType = useSelector(selectThemeType);
@@ -19,9 +20,13 @@ export const Footer = () => {
             <Container classNameInner={style.footer}>
 
                 <div className={style.firstBlock}>
-                    <SvgIcon icon={themeType === "light" ? svgIcons.logo_dark : svgIcons.logo_light}
-                             className={style.logo}
-                    />
+                    <HashLink to="/#header"
+                              //className={style.logo}
+                    >
+                        <SvgIcon icon={themeType === "light" ? svgIcons.logo_dark : svgIcons.logo_light}
+                                 className={style.logo}
+                        />
+                    </HashLink>
                     <ThemeSwitcher className={style.theme}/>
                     <p className={style.copy}>DigDesign © 2022</p>
                 </div>
