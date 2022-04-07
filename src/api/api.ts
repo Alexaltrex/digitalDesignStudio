@@ -2,8 +2,8 @@ import axios from "axios";
 
 export const instance = axios.create({
     baseURL: process.env.NODE_ENV === 'development'
-        ? 'http://localhost:3333/api'
-        : 'http://localhost:3333/api',
+        ? process.env.REACT_APP_API_DEV
+        : process.env.REACT_APP_API_PROD,
     //withCredentials: true,
 });
 
