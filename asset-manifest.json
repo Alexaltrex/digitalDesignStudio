@@ -1,8 +1,11 @@
 {
   "files": {
-    "main.css": "/digitalDesignStudio/static/css/main.6a633a96.css",
-    "main.js": "/digitalDesignStudio/static/js/main.bc23c642.js",
+    "main.css": "/digitalDesignStudio/static/css/main.3d1d7522.css",
+    "main.js": "/digitalDesignStudio/static/js/main.f21109f7.js",
     "static/js/787.c09b5dc3.chunk.js": "/digitalDesignStudio/static/js/787.c09b5dc3.chunk.js",
+    "static/media/desktop.jpg": "/digitalDesignStudio/static/media/desktop.5ff836d792678fa14f03.jpg",
+    "static/media/mobile.jpg": "/digitalDesignStudio/static/media/mobile.d30ad048efafdc42f446.jpg",
+    "static/media/main.jpg": "/digitalDesignStudio/static/media/main.ef095d735441514d9579.jpg",
     "static/media/main.png": "/digitalDesignStudio/static/media/main.1a8dfe0a773d46919dfd.png",
     "static/media/brief.pdf": "/digitalDesignStudio/static/media/brief.ca58e123f2ea998de2b1.pdf",
     "static/media/wave_light.png": "/digitalDesignStudio/static/media/wave_light.f675151d463294d73331.png",
@@ -24,12 +27,12 @@
     "static/media/blur.png": "/digitalDesignStudio/static/media/blur.d7b9cbb8a45cc077ad18.png",
     "static/media/Logo Antoniuk.png": "/digitalDesignStudio/static/media/Logo Antoniuk.180d52f2a9f7ad81c471.png",
     "index.html": "/digitalDesignStudio/index.html",
-    "main.6a633a96.css.map": "/digitalDesignStudio/static/css/main.6a633a96.css.map",
-    "main.bc23c642.js.map": "/digitalDesignStudio/static/js/main.bc23c642.js.map",
+    "main.3d1d7522.css.map": "/digitalDesignStudio/static/css/main.3d1d7522.css.map",
+    "main.f21109f7.js.map": "/digitalDesignStudio/static/js/main.f21109f7.js.map",
     "787.c09b5dc3.chunk.js.map": "/digitalDesignStudio/static/js/787.c09b5dc3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a633a96.css",
-    "static/js/main.bc23c642.js"
+    "static/css/main.3d1d7522.css",
+    "static/js/main.f21109f7.js"
   ]
 }
