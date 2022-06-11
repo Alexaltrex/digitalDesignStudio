@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/digitalDesignStudio/static/css/main.3d1d7522.css",
-    "main.js": "/digitalDesignStudio/static/js/main.f21109f7.js",
+    "main.css": "/digitalDesignStudio/static/css/main.67f7f79a.css",
+    "main.js": "/digitalDesignStudio/static/js/main.e402d3ed.js",
     "static/js/787.c09b5dc3.chunk.js": "/digitalDesignStudio/static/js/787.c09b5dc3.chunk.js",
     "static/media/desktop.jpg": "/digitalDesignStudio/static/media/desktop.5ff836d792678fa14f03.jpg",
     "static/media/mobile.jpg": "/digitalDesignStudio/static/media/mobile.d30ad048efafdc42f446.jpg",
@@ -25,14 +25,20 @@
     "static/media/img1.png": "/digitalDesignStudio/static/media/img1.d1fac4999a1260f8eda1.png",
     "static/media/mobile.png": "/digitalDesignStudio/static/media/mobile.494d5017dbd55ed94322.png",
     "static/media/blur.png": "/digitalDesignStudio/static/media/blur.d7b9cbb8a45cc077ad18.png",
+    "static/media/frontend_saga.png": "/digitalDesignStudio/static/media/frontend_saga.7a3e844231851f988402.png",
+    "static/media/frontend_sass.png": "/digitalDesignStudio/static/media/frontend_sass.95acddf06be5308d9a94.png",
     "static/media/Logo Antoniuk.png": "/digitalDesignStudio/static/media/Logo Antoniuk.180d52f2a9f7ad81c471.png",
+    "static/media/frontend_materialui.png": "/digitalDesignStudio/static/media/frontend_materialui.5b2d8a0a309d9f7d47c1.png",
+    "static/media/frontend_typescript.png": "/digitalDesignStudio/static/media/frontend_typescript.9c26f8b2a0484e2cb4f2.png",
+    "static/media/frontend_formik.png": "/digitalDesignStudio/static/media/frontend_formik.95443f3a820d21784c67.png",
+    "static/media/frontend_nextjs.png": "/digitalDesignStudio/static/media/frontend_nextjs.6db19b31cc0a2f63cff4.png",
     "index.html": "/digitalDesignStudio/index.html",
-    "main.3d1d7522.css.map": "/digitalDesignStudio/static/css/main.3d1d7522.css.map",
-    "main.f21109f7.js.map": "/digitalDesignStudio/static/js/main.f21109f7.js.map",
+    "main.67f7f79a.css.map": "/digitalDesignStudio/static/css/main.67f7f79a.css.map",
+    "main.e402d3ed.js.map": "/digitalDesignStudio/static/js/main.e402d3ed.js.map",
     "787.c09b5dc3.chunk.js.map": "/digitalDesignStudio/static/js/787.c09b5dc3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d1d7522.css",
-    "static/js/main.f21109f7.js"
+    "static/css/main.67f7f79a.css",
+    "static/js/main.e402d3ed.js"
   ]
 }
