@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/digitalDesignStudio/static/css/main.67f7f79a.css",
-    "main.js": "/digitalDesignStudio/static/js/main.9e112246.js",
+    "main.css": "/digitalDesignStudio/static/css/main.f6493092.css",
+    "main.js": "/digitalDesignStudio/static/js/main.3df694ec.js",
     "static/js/787.c09b5dc3.chunk.js": "/digitalDesignStudio/static/js/787.c09b5dc3.chunk.js",
     "static/media/desktop.jpg": "/digitalDesignStudio/static/media/desktop.5ff836d792678fa14f03.jpg",
-    "static/media/mobile.jpg": "/digitalDesignStudio/static/media/mobile.d30ad048efafdc42f446.jpg",
     "static/media/main.jpg": "/digitalDesignStudio/static/media/main.ef095d735441514d9579.jpg",
+    "static/media/mobile.jpg": "/digitalDesignStudio/static/media/mobile.d30ad048efafdc42f446.jpg",
     "static/media/main.png": "/digitalDesignStudio/static/media/main.1a8dfe0a773d46919dfd.png",
     "static/media/brief.pdf": "/digitalDesignStudio/static/media/brief.ca58e123f2ea998de2b1.pdf",
     "static/media/wave_light.png": "/digitalDesignStudio/static/media/wave_light.f675151d463294d73331.png",
@@ -33,12 +33,12 @@
     "static/media/frontend_formik.png": "/digitalDesignStudio/static/media/frontend_formik.95443f3a820d21784c67.png",
     "static/media/frontend_nextjs.png": "/digitalDesignStudio/static/media/frontend_nextjs.6db19b31cc0a2f63cff4.png",
     "index.html": "/digitalDesignStudio/index.html",
-    "main.67f7f79a.css.map": "/digitalDesignStudio/static/css/main.67f7f79a.css.map",
-    "main.9e112246.js.map": "/digitalDesignStudio/static/js/main.9e112246.js.map",
+    "main.f6493092.css.map": "/digitalDesignStudio/static/css/main.f6493092.css.map",
+    "main.3df694ec.js.map": "/digitalDesignStudio/static/js/main.3df694ec.js.map",
     "787.c09b5dc3.chunk.js.map": "/digitalDesignStudio/static/js/787.c09b5dc3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.67f7f79a.css",
-    "static/js/main.9e112246.js"
+    "static/css/main.f6493092.css",
+    "static/js/main.3df694ec.js"
   ]
 }
